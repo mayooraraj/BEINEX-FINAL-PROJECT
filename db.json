@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "firstname": "",
+      "lastname": "",
+      "birthday": "",
+      "age": "",
+      "gender": "",
+      "phno": "",
+      "bloodgroup": "default",
+      "email": "",
+      "id": 1
+    },
+    {
+      "firstname": "Mayoora",
+      "lastname": "raj",
+      "birthday": "2023-12-01",
+      "age": 2,
+      "gender": "f",
+      "role": "System analyst",
+      "phno": "9946782303",
+      "bloodgroup": "AB-",
+      "email": "",
+      "profile": "profile1.jpg",
+      "id": 2
+    },
+    {
+      "firstname": "krishnaa",
+      "lastname": "",
+      "birthday": "",
+      "age": "",
+      "gender": "",
+      "phno": "",
+      "bloodgroup": "default",
+      "email": "",
+      "password": "krishna12",
+      "id": 3
+    },
+    {
+      "firstname": "prameela",
+      "lastname": "rajan",
+      "birthday": "2012-06-14",
+      "age": 1,
+      "gender": "f",
+      "role": "web designer",
+      "phno": "9747807583",
+      "bloodgroup": "O-",
+      "email": "prameela@gmail.com",
+      "password": "1234",
+      "profile": "girl.jpg",
+      "id": 4
+    },
+    {
+      "firstname": "arun",
+      "lastname": "",
+      "birthday": "",
+      "age": "",
+      "gender": "",
+      "phno": "",
+      "bloodgroup": "default",
+      "email": "",
+      "password": "1234",
+      "profile": "profile1.jpg",
+      "id": 5
+    },
+    {
+      "firstname": "anusree",
+      "lastname": "",
+      "birthday": "",
+      "age": "",
+      "gender": "",
+      "phno": "",
+      "bloodgroup": "default",
+      "email": "",
+      "password": "1234",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "name": "krishna",
+      "eid": "1",
+      "startdate": "2023-12-08",
+      "enddate": "2023-12-14",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,76 @@
+
+$navbar-padding: 15px; 
+$navbar-item-spacing: 15px; 
+
+.navbar {
+  background-color: #28a745; 
+}
+
+/* Navbar content container styling */
+.navcontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  color: #fff; 
+  font-weight: bold;
+  color: #fff; 
+  font-weight: bold;
+  font-family: 'Creepster',cursive;
+  letter-spacing: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+.navbar-nav {
+  margin-left: auto; // Push the navbar items to the right
+  display: flex;
+  gap: $navbar-item-spacing;
+}
+.nav-link {
+  color: #fff; 
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+a:hover{
+    color: yellow;
+}
+.error{
+    color: red;
+}
+
+.body{
+    width: 100%;
+    display: flex;
+    &__left{
+        width: 50%;
+        height: 500px;
+        // background-image: url('../../../assets/images/download.jpg');
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-size: cover;
+    }
+    &__right{
+        width: 50%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+       
+    }
+}
+.login-form{
+    width: 500px;
+    height: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(132, 187, 132);
+    margin-left: 7vw;
+    
+    
+}

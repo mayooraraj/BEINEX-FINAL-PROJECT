@@ -1,0 +1,37 @@
+<div class="navbarr">
+    <div class="top">
+        <mat-icon>notifications_none</mat-icon> 
+    </div>
+    <div class="user">
+        <img src="../../../assets/images/{{loggedInEmployee?.profile}}" alt="">
+        <h4 class="name">Hi ! {{loggedInEmployee?.firstname}}</h4>
+        <p class="email">{{loggedInEmployee?.email}}</p>
+    </div>
+    <div class="menu">
+        <div class="menu-head">
+            <span>Dashboard</span>
+        </div>
+        <div class="menu-item">
+            <button mat-button  class="menu-button" [routerLink]="'profile'">
+                <mat-icon>dashboard</mat-icon>
+                <span>Profile</span>
+            </button>
+            <button mat-button  class="menu-button">
+                <mat-icon>view_list</mat-icon>
+                <span>Leave details</span>
+            </button>
+            <button mat-button  class="menu-button" [routerLink]="'leave-form'">
+                <mat-icon>send</mat-icon>
+                <span>Leave form</span>
+            </button>
+            <button mat-button  class="menu-button">
+                <mat-icon>edit_note</mat-icon>
+                <span>Edit</span>
+            </button>
+            <button mat-button  class="menu-button">
+                <mat-icon>settings</mat-icon>
+                <span>settings</span>
+            </button>
+        </div>
+    </div>
+</div>

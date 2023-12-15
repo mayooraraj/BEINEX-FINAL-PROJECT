@@ -1,0 +1,59 @@
+<div class="emp-card">
+    <div class="emp-card__left"> <!--profile image-->
+        <img src="../../assets/images/{{employee.profile}}" alt="profile image">
+    </div>
+
+    <div class="emp-card__right"><!--personal details-->
+
+        <div class="emp-card__right__top"> <!--top-->
+            <div class=" emp-card__name"><!--name-->
+                <span>{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+            </div>
+
+            <div class="emp-card__btn"><!--two button-->
+                <button type="button" class="btn btn-outline-success" (click)=" editEmployeeClicked()">Edit</button>
+                <button type="button" class="btn btn-outline-danger" (click)="deleteEmployeeClicked()">Delete</button> 
+                
+                
+            
+            </div>
+        </div>
+
+        <div class="row "><!--bottom-->
+                <table class="table table-hover ">
+                    <tbody>
+                        <tr>
+                            <td>Birthdate</td>
+                            <td>{{employee.birthday}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{employee.gender == 'm' ? "Male" : 'f' ? "Female" : "Other"}}</td>
+                        </tr>
+                        <tr>
+                            <td>Blood Group</td>
+                            <td>{{employee.bloodgroup}}</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>{{employee.age}}</td>
+                        </tr>
+                        <tr>
+                            <td>Role</td>
+                            <td>{{employee.role}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email ID</td>
+                            <td>{{employee.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>{{employee.phno}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+</div>
