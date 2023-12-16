@@ -41,7 +41,7 @@ export class LeaveapplicaionComponent {
 
     //to get leave datas from back end
     this.leaveService.getleave().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       
     })
 
@@ -49,12 +49,52 @@ export class LeaveapplicaionComponent {
     //to get logined employee data
     this.empSharedData.employeeData$.subscribe((data) => { //new
       this.loggedInEmployee = data;
+
+      //to set employee id and name in the form controls
+      this.leaveForm.get('name')?.setValue(`${this.loggedInEmployee?.firstname}${this.loggedInEmployee?.lastname}`);
+      this.leaveForm.get('eid')?.setValue(this.loggedInEmployee?.id);
     });
+
+   
+  }
+
+  //apply button click function
+  applyemployeeleave(){
+
+    let data:leavemodel ={
+      name:this.Name.value,
+      eid:this.Id.value,
+      startdate:this.StartDate.value,
+      enddate:this.EndDate.value,
+      reason:this.Reason.value,
+      status:'pending',//new
+    };
+    this.leaveService.postleave(data).subscribe((res) => {
+        this.employeeleave.unshift(res);
+    })
+    alert("Leave Requested Successfully");
+    this.StartDate.setValue('');
+    this.EndDate.setValue('');
+    this.Reason.setValue('');
+    
   }
 
   //to access controls
     public get Name():FormControl {
       return this.leaveForm.get('name') as FormControl;
     }
+    public get Id():FormControl {
+      return this.leaveForm.get('eid') as FormControl;
+    }
+    public get StartDate():FormControl {
+      return this.leaveForm.get('startdate') as FormControl;
+    }
+    public get EndDate():FormControl {
+      return this.leaveForm.get('enddate') as FormControl;
+    }
+    public get Reason():FormControl {
+      return this.leaveForm.get('reason') as FormControl;
+    }
+   
    
 }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { leavemodel } from '../models/leave';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class LeaveService {
 
   //apply leave
 
-  applyleave(data:leavemodel){
+  postleave(data:leavemodel){
     return this.http.post<leavemodel>(this.leaveurl,data);
   }
 
@@ -21,5 +22,15 @@ export class LeaveService {
   getleave(){
     return this.http.get<leavemodel[]>(this.leaveurl)
   }
+
+  rejectleave(id:string){
+    return this.http.delete(this.leaveurl + '/' + id)
+  }
+
+  approveLeave(id:string,employee:leavemodel){
+    return this.http.put(this.leaveurl + '/' + id, employee);
+  }
+
+  
 
 }

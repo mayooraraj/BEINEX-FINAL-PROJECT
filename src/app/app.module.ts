@@ -21,6 +21,8 @@ import { LoginComponent } from './components/login/login.component';
 import { EmpsidebarComponent } from './components/empsidebar/empsidebar.component';
 import { LeaveapplicaionComponent } from './components/leaveapplicaion/leaveapplicaion.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ViewleaveComponent } from './components/viewleave/viewleave.component';
+import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-dash-view-leave.component';
 
 
 @NgModule({
@@ -34,6 +36,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     EmpsidebarComponent,
     LeaveapplicaionComponent,
     ProfileComponent,
+    ViewleaveComponent,
+    EmpDashViewLeaveComponent,
+   
   ],
   imports: [
     BrowserModule,

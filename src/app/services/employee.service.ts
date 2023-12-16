@@ -21,4 +21,9 @@ export class EmployeeService {
   deleteEmployee(id:string){
     return this.http.delete(this.baseUrl + '/' + id)
   }
+
+  //to edit employee details from emp dashboard
+  editEmployee(id:string,employee:Employee){
+    return this.http.put(this.baseUrl + '/' + id, employee);
+  }
 }

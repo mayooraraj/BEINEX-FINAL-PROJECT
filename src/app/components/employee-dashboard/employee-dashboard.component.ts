@@ -13,7 +13,7 @@ export class EmployeeDashboardComponent implements OnInit{
   constructor( private router:Router, private empSharedData:ShareempdataService){
 
     //to get loged in user data
-    const state= this.router.getCurrentNavigation()?.extras.state
+      const state= this.router.getCurrentNavigation()?.extras.state
       console.log(state);
       this.loggedInEmployee = state?.['loggedInEmployee'];
       console.log(this.loggedInEmployee);

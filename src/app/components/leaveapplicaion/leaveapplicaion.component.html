@@ -5,12 +5,12 @@
 
     <div class="row mb-3">
         <div class="col">
-            <label for="Input1" class="form-label">{{loggedInEmployee?.firstname}}</label>
-            <input class="form-control" type="text" formControlName="name" >
+            <label for="Input1" class="form-label">Employee Name</label>
+            <input class="form-control" type="text" formControlName="name" placeholder="{{loggedInEmployee?.firstname}}{{ loggedInEmployee?.lastname }}">
         </div>
         <div class="col">
             <label for="Input2" class="form-label">Employee ID</label>
-            <input class="form-control" type="text" formControlName="eid" >
+            <input class="form-control" type="text" formControlName="eid" placeholder="{{loggedInEmployee?.id}}" readonly>
         </div>
     </div>
     <div class="row">
@@ -29,8 +29,9 @@
     </div>
     <div class="btn mt-3">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary" >APPLY</button>
-            <button type="button"  class="btn btn-danger" routerLink="/view-leave">VIEW</button>
+            <button type="button" class="btn btn-primary" (click)="applyemployeeleave()">APPLY</button>
+            <button type="button"  class="btn btn-danger" >VIEW</button>
+            <!-- <button type="button"  class="btn btn-danger" routerLink="/view-leave">VIEW</button> -->
           </div>
     </div>
 </form>

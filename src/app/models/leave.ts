@@ -5,5 +5,6 @@ export class leavemodel{
     startdate:string='';
     enddate='';
     reason:string='';
+    status:string=''; //new
 
 }

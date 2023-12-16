@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;400&family=Poppins:wght@300;400&display=swap');
 
 *{
     font-family: 'sans-serif';
@@ -10,6 +10,10 @@ mat-icon{
     font-family: 'Material Icons';
     vertical-align: middle;
     font-size: 25px;
+}
+.navbarr{ //new to avoid alignment issue
+    z-index: 1000;
+    visibility: visible;
 }
 img{
     background-color: white;

@@ -7,10 +7,14 @@ import { BehaviorSubject } from 'rxjs';
 export class ShareempdataService {
 
   constructor() { }
+  
+  //service contain logined user data
+
   private employeeDataSubject = new BehaviorSubject<any>(null);
   employeeData$ = this.employeeDataSubject.asObservable();
 
   setEmployeeData(data: any) {
     this.employeeDataSubject.next(data);
+    
   }
 }

@@ -23,7 +23,7 @@ export class LoginComponent {
   ngOnInit(): void {
     this.employeeService.getEmployees().subscribe((res) => {
       this.employees = res;
-      console.log(this.employees);
+      // console.log(this.employees);
        
     })
   }
@@ -34,7 +34,7 @@ export class LoginComponent {
     console.log("Password:", this.password);
 
     const loginData =this.employees.find(e => e.firstname === this.username)
-    console.log(loginData);
+    // console.log(loginData);
     
 
     if(this.username.trim().length === 0){ //trim remove white spaces from both end

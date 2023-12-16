@@ -37,7 +37,7 @@
       "id": 3
     },
     {
-      "firstname": "prameela",
+      "firstname": "ullas",
       "lastname": "rajan",
       "birthday": "2012-06-14",
       "age": 1,
@@ -49,36 +49,12 @@
       "password": "1234",
       "profile": "girl.jpg",
       "id": 4
-    },
-    {
-      "firstname": "arun",
-      "lastname": "",
-      "birthday": "",
-      "age": "",
-      "gender": "",
-      "phno": "",
-      "bloodgroup": "default",
-      "email": "",
-      "password": "1234",
-      "profile": "profile1.jpg",
-      "id": 5
-    },
-    {
-      "firstname": "anusree",
-      "lastname": "",
-      "birthday": "",
-      "age": "",
-      "gender": "",
-      "phno": "",
-      "bloodgroup": "default",
-      "email": "",
-      "password": "1234",
-      "id": 6
     }
   ],
   "comments": [
     {
-      "id": 1
+      "id": 1,
+      "status": "approved"
     },
     {
       "id": 2
@@ -95,6 +71,64 @@
       "startdate": "2023-12-08",
       "enddate": "2023-12-14",
       "id": 5
+    },
+    {
+      "name": "",
+      "eid": "",
+      "startdate": "2023-12-14",
+      "enddate": "2023-12-13",
+      "reason": "",
+      "id": 6
+    },
+    {
+      "name": "anusree",
+      "eid": 6,
+      "startdate": "",
+      "enddate": "",
+      "reason": "",
+      "id": 7
+    },
+    {
+      "name": "anusree",
+      "eid": 6,
+      "startdate": "2023-12-08",
+      "enddate": "2023-12-04",
+      "reason": "sick leave",
+      "id": 8
+    },
+    {
+      "name": "prameelarajan",
+      "eid": 4,
+      "startdate": "2023-12-06",
+      "enddate": "2023-12-09",
+      "reason": "",
+      "id": 9
+    },
+    {
+      "name": "arun",
+      "eid": 5,
+      "startdate": "2023-12-07",
+      "enddate": "2023-12-22",
+      "reason": "Out of station",
+      "id": 10
+    },
+    {
+      "name": "prameelarajan",
+      "eid": 4,
+      "startdate": "2023-12-05",
+      "enddate": "2023-12-22",
+      "reason": "sick leave",
+      "status": "approved",
+      "id": 11
+    },
+    {
+      "name": "hi",
+      "eid": 4,
+      "startdate": "",
+      "enddate": "",
+      "reason": "",
+      "status": "pending",
+      "id": 12
     }
   ],
   "profile": {
