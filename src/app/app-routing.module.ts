@@ -10,13 +10,15 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ViewleaveComponent } from './components/viewleave/viewleave.component';
 import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-dash-view-leave.component';
 import { BarchartComponent } from './components/barchart/barchart.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'addemployee',component:DashboardPageComponent},
-  {path:'employee-detail',component:EmployeeDetailComponent},
-  {path:'bar-chart',component:BarchartComponent},
-  {path:'view-leave',component:ViewleaveComponent},
+  {path:'addemployee',component:DashboardPageComponent,canActivate:[authGuard]},
+  {path:'hr-dashboard',component:HrDashboardComponent,canActivate:[authGuard]},
+  {path:'employee-detail',component:EmployeeDetailComponent,canActivate:[authGuard]},
+  {path:'bar-chart',component:BarchartComponent,canActivate:[authGuard]},
+  {path:'view-leave',component:ViewleaveComponent,canActivate:[authGuard]},
   {
     path:'employee-dashboard',component:EmployeeDashboardComponent,
     children:[
@@ -27,7 +29,7 @@ const routes: Routes = [
      
     ]
   },
-  {path:'hr-dashboard',component:HrDashboardComponent},
+ // {path:'hr-dashboard',component:HrDashboardComponent, canActivate:[authGuard]},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
 ];

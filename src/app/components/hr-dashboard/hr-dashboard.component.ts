@@ -10,7 +10,13 @@ export class HrDashboardComponent {
 
   constructor(private router:Router){}
   logout(){
-
+    const confirmation = confirm('Do you want to logout ?');
+    // window confirm return true or false
+    if(confirmation){
+      localStorage.removeItem('token');
+      this.router.navigate(['login']);
+    }
+    
   }
 }
 

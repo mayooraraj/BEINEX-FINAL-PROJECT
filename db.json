@@ -25,7 +25,7 @@
       "role": "web designer",
       "phno": "9747824832",
       "bloodgroup": "AB+",
-      "email": "theertha@gmail.com",
+      "email": "theerthababu@gmail.com",
       "password": "1234",
       "profile": "lady.jpg",
       "id": 6
@@ -59,6 +59,21 @@
       "password": "1234",
       "profile": "profile1.jpg",
       "id": 8
+    },
+    {
+      "firstname": "amal",
+      "lastname": "vinod",
+      "birthday": "1995-09-29",
+      "age": 28,
+      "gender": "m",
+      "status": "Active",
+      "role": "System analyst",
+      "phno": "7852631529",
+      "bloodgroup": "O+",
+      "email": "amal@gmail.com",
+      "password": "1234",
+      "profile": "profile1.jpg",
+      "id": 9
     }
   ],
   "comments": [

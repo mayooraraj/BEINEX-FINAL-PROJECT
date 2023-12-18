@@ -55,6 +55,7 @@ export class ProfileComponent implements OnInit{
       console.log('updated the employee profile',res);
       
     })
+    confirm("Profile Edit Successfully")
     console.log('cliocked');
     
   }

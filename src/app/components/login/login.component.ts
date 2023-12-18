@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
-import { AuthService } from 'src/app/services/auth.service';
+// import { AuthService } from 'src/app/services/auth.service';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
@@ -46,9 +46,12 @@ export class LoginComponent {
       this.errorMsg ="";
       // let res = this.auth.login(this.username,this.password);
       if(this.employees.find(e => e.firstname === this.username && e.password === this.password)){
+        localStorage.setItem('token',Math.random().toString());
         this.router.navigate(['employee-dashboard'],{state:{ loggedInEmployee: loginData }}); //n
       }
       else if(this.username === 'hr' && this.password === '1234'){
+        //if hr credential match create a token
+        localStorage.setItem('token',Math.random().toString());
         this.router.navigate(['hr-dashboard']);
       }
       else{
