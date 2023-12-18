@@ -22,4 +22,8 @@ export class EmployeeDashboardComponent implements OnInit{
   ngOnInit(): void {
     this.empSharedData.setEmployeeData(this.loggedInEmployee);
   }
+
+  logout(){
+    this.router.navigate(['/login'])
+  }
 }

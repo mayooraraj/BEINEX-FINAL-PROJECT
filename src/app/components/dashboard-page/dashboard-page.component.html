@@ -24,14 +24,13 @@
     </mat-sidenav-container> -->
 
 
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-success">
         <div class="container-fluid">
-          <a class="navbar-brand">Back</a>
-          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>ADD EMPLOYEE</button>
+          <a class="navbar-brand back" href="/hr-dashboard">Back</a>
+          <button type="button" class="btn btn-success addemployee" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>ADD EMPLOYEE</button>
           <form class="d-flex" role="search">
             <div class="search-employees">
-                <input type="search" class="form-control" placeholder="Search" (input)="searchEmployees(searchInput.value)" #searchInput>
-        
+                <input type="search" class="form-control search" placeholder="Search" (input)="searchEmployees(searchInput.value)" #searchInput>
             </div>
           </form>
         </div>
@@ -55,17 +54,23 @@
             <div class="row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="First Name" formControlName="firstname">
-                </div>
+                    <small *ngIf="employeeForm?.get('firstname')?.invalid && employeeForm?.get('firstname')?.touched">
+                      *First Name is a required Field.
+                    </small>
+                  </div>
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname" >
-                </div>
+                    <small *ngIf="employeeForm?.get('lastname')?.invalid && employeeForm?.get('lastname')?.touched">
+                      *Last Name is a required Field.
+                    </small>
+                  </div>
             </div>
             <div class="row mt-5" >
                 <div class="col form-heading">
                     <h3 class="text-secondary fst-italic">Personal Information</h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row ">
                 <div class="col">
                     <label for="datepicker" class="form-label">Birthdate</label>
                     <input type="date" class="form-control" id="datepicker" formControlName="birthday" >
@@ -126,13 +131,19 @@
 
             <div class="row mt-3">
                 <div class="col">
-                   <input type="email" class="form-control" placeholder="Enter  Email id" formControlName="email">
-                </div>
+                   <input type="email" class="form-control" placeholder="Email ID" formControlName="email">
+                   <small *ngIf="employeeForm?.get('email')?.invalid && employeeForm?.get('email')?.touched">
+                    *Enter valid Email id.
+                  </small>
+                  </div>
             </div>
 
             <div class="row mt-2">
               <div class="col">
                 <input type="text" class="form-control" placeholder="Password"  formControlName="password">
+                <small *ngIf="employeeForm?.get('password')?.invalid && employeeForm?.get('password')?.touched">
+                  *Password is a required.
+                </small>
               </div>
             </div>
 

@@ -20,3 +20,14 @@ mat-toolbar{
         margin-top: 15px;
     }
 }
+
+
+@media (max-width: 767px) {
+    mat-icon{
+        display: none;
+    }
+    mat-sidenav{
+        width:30%;
+        z-index: 1000;
+    }
+}

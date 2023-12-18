@@ -23,8 +23,8 @@ export class LeaveService {
     return this.http.get<leavemodel[]>(this.leaveurl)
   }
 
-  rejectleave(id:string){
-    return this.http.delete(this.leaveurl + '/' + id)
+  rejectleave(id:string,employee:leavemodel){
+    return this.http.put(this.leaveurl + '/' + id, employee);
   }
 
   approveLeave(id:string,employee:leavemodel){

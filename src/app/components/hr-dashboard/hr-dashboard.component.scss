@@ -18,7 +18,7 @@ $navbar-item-spacing: 15px;
   font-weight: bold;
   font-family: 'Creepster',cursive;
   letter-spacing: 4px;
-  font-size: 24px;
+  font-size: 1.7vw;
   cursor: pointer;
 }
 .navbar-nav {
@@ -39,3 +39,34 @@ a:hover{
     color: yellow;
 }
 
+
+
+
+
+//mobile
+@media (max-width: 768px) {
+  .navbar-brand{
+    display: none;
+  }
+  .navbar-nav {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  // .nav-link {
+  //   color:white;
+  //   margin: 0px 0; 
+  //   display:table-column-group;
+  // }
+}
+
+//tablet
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-nav {
+    margin-left: 0; 
+    flex-direction: row;
+    text-align: left; 
+  }
+}

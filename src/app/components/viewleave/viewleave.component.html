@@ -1,3 +1,9 @@
+<nav class="navbar navbar-expand-lg bg-success">
+  <div class="container-fluid navcontent">
+    <a class="navbar-brand back" href="/hr-dashboard">Back</a>
+    <a class="navbar-brand" href="/login">Employee Management System</a>
+  </div>
+</nav>
 
 <table class="table">
     <thead>
@@ -26,8 +32,8 @@
         <td>{{leave.reason}}</td>
         <td>
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-success approved"   (click)="approveleave(leave?.id)">Approve</button>
-                <button type="button" class="btn btn-danger" (click)="rejectleave()">Reject</button>
+                <button type="button"  id="apply" class="btn btn-success approved"   (click)="approveleave(leave?.id)">Approve</button>
+                <button type="button" id="reject" class="btn btn-danger" (click)="rejectedleave(leave?.id)">Reject</button>
               </div>
         </td>
       </tr>

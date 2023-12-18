@@ -49,6 +49,7 @@ img{
         display: block;
         display: flex;
         padding-left: 45px;
+        margin-left: 0px;
         margin-bottom: 15px;
        
     }
@@ -68,4 +69,22 @@ img{
 }
 .name{
     margin-top: 2vh;
+}
+
+
+@media (max-width: 767px) {
+    
+    img {
+        width: 100px; 
+        height: 100px; 
+    }
+    .menu-button{
+        padding-left: 0px;
+    }
+    .menu-head{
+        margin-left: 0px;
+        span{
+            font-size: 15px;
+        }
+    }
 }

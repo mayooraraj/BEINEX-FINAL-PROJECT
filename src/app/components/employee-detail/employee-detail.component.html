@@ -4,18 +4,13 @@
     </div>
 
     <div class="emp-card__right"><!--personal details-->
-
         <div class="emp-card__right__top"> <!--top-->
             <div class=" emp-card__name"><!--name-->
                 <span>{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
             </div>
-
             <div class="emp-card__btn"><!--two button-->
-                <button type="button" class="btn btn-outline-success" (click)=" editEmployeeClicked()">Edit</button>
-                <button type="button" class="btn btn-outline-danger" (click)="deleteEmployeeClicked()">Delete</button> 
-                
-                
-            
+                <button type="button" class="btn btn-success" (click)=" editEmployeeClicked()">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="deleteEmployeeClicked()">Delete</button> 
             </div>
         </div>
 

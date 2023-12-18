@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Employee } from '../../models/employee.model';
 import { EmployeeService } from '../../services/employee.service';
 import { Router } from '@angular/router';
@@ -33,18 +33,19 @@ export class DashboardPageComponent implements OnInit{
 
   ngOnInit(): void {
     this.employeeForm = this.fb.group({
-      firstname:this.fb.control(''),
-      lastname:this.fb.control(''),
-      birthday:this.fb.control(''),
-      age:this.fb.control(''),
-      gender:this.fb.control(''),
-      role:this.fb.control('default'),
-      phno:this.fb.control(''),
-      bloodgroup:this.fb.control('default'),
-      email:this.fb.control(''),
-      password:this.fb.control(''),
-
+      firstname:this.fb.control('',Validators.required),
+      lastname:this.fb.control('',Validators.required),
+      birthday:this.fb.control('',Validators.required),
+      age:this.fb.control('',Validators.required),
+      gender:this.fb.control('',Validators.required),
+      role:this.fb.control('default',Validators.required),
+      phno:this.fb.control('',Validators.required),
+      bloodgroup:this.fb.control('default',Validators.required),
+      email:this.fb.control('',[Validators.required, Validators.email]),
+      password:this.fb.control('',Validators.required),
     });
+   
+    
     
     this.employeeService.getEmployees().subscribe(res =>{
       for(let emp of res){
@@ -69,7 +70,8 @@ export class DashboardPageComponent implements OnInit{
       password:this.Password.value,
       profile:this.fileInput.nativeElement.files[0]?.name, //give selected file name in array files
     }
-     
+     alert('Employee Added Successfully')
+    console.log('now trying',this.employeeForm );
     //  this.router.navigate(['/employee-detail']);
     //send the created object in backend
     this.employeeService.postEmployee(employee).subscribe((res) => {
@@ -114,7 +116,9 @@ export class DashboardPageComponent implements OnInit{
     this.PhoneNumber.setValue(emp.phno);
     this.BloodGroup.setValue(emp.bloodgroup);
     this.Email.setValue(emp.email);
+    this.Password.setValue(emp.password);
     this.fileInput.nativeElement.value='';
+    
     }
 
     searchEmployees(event:any){

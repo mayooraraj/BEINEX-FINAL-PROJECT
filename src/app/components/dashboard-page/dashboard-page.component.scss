@@ -7,12 +7,32 @@
         background-color: white;
     }
 }
-// .mat-toolbar-row {
-//     .text {
-//       flex: 1 1 auto;
-//     }
-//   }
-//   mat-sidenav {
-//     background-color: lightgray;
-//     border: 1px solid gray;
-//   }
+
+
+.navbar{
+   
+    .search-employees{
+        margin-right: 5vw;
+    
+        .search{
+            width: 29vw;
+        }
+    }
+    
+    .addemployee{
+        font-weight: bold;
+    }
+    .back{
+        background-color: white;
+        padding: 8px;     
+        border-radius: 5px;  
+        font-weight:500; 
+    }
+}
+ small{
+    color: red;
+    font-weight: bold;
+ }
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

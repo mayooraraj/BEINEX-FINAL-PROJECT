@@ -28,11 +28,11 @@ export class ViewleaveComponent implements OnInit {
      
     this.leaveService.getleave().subscribe((res) => {
     //  console.log('leave data',res);
-      this.employeeleaveDisplay =res;
-      // for(let j of res){
-      //   this.employeeleave.push(j);
-      // }
-      // this.employeeleaveDisplay = this.employeeleave;
+     // this.employeeleaveDisplay =res;
+      for(let j of res){
+        this.employeeleave.unshift(j);
+      }
+      this.employeeleaveDisplay = this.employeeleave;
       
     })
     this.employeeService.getEmployees().subscribe((res) => {
@@ -44,21 +44,54 @@ export class ViewleaveComponent implements OnInit {
 
   approveleave(leaveId: any){
     console.log(leaveId);
+    alert("Leave Approved");
 
     if(leaveId){
      const approvedData:any = this.employeeleaveDisplay.find(e => e.id === leaveId);
      approvedData.status = 'approved';
 
      this.leaveService.approveLeave(leaveId,approvedData).subscribe((res) => {
-      console.log('leave approves',res);
-      
-    })
-    }
+      console.log('leave approved',res);})
+  
+      //to remove from leave list when button clicked
+      const approvedDataIndex = this.employeeleaveDisplay.findIndex(e => e.id === leaveId);
+        if (approvedDataIndex !== -1) {
+            this.employeeleaveDisplay.splice(approvedDataIndex, 1);
+        
+        }
     
-    alert("Leave Approved");
-  }
-
-  rejectleave(){
-    alert("Leave rejected");
+    //to change button text when button clicked
+    //var button = document.getElementById("apply");
+    // button!.style.backgroundColor='red';
+    // if (button!.textContent === "Approve") {
+    //     button!.textContent = "Approved";
+    //   } 
+    
+    
   }
 }
+
+  rejectedleave(leaveId: any){
+
+    alert("Leave rejected");
+       
+         const rejectedData:any = this.employeeleaveDisplay.find(e => e.id === leaveId);
+        rejectedData.status = 'Rejected'; 
+        
+        this.leaveService.rejectleave(leaveId,rejectedData).subscribe((res) => {
+        console.log('leave rejected',res);})
+
+        //to remove from leave list when button clicked
+        const approvedDataIndex = this.employeeleaveDisplay.findIndex(e => e.id === leaveId);
+         if (approvedDataIndex !== -1)
+      {
+         this.employeeleaveDisplay.splice(approvedDataIndex, 1);
+      }
+     }
+    //  var button = document.getElementById("reject");
+    // if (button!.textContent === "Reject") {
+    //     button!.textContent = "Rejected";
+    //   } 
+   
+  }
+

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { leavemodel } from 'src/app/models/leave';
@@ -34,9 +34,9 @@ export class LeaveapplicaionComponent {
     this.leaveForm=this.fb.group({
       eid:this.fb.control(''),
       name:this.fb.control(''),
-      startdate:this.fb.control(''),
-      enddate:this.fb.control(''),
-      reason:this.fb.control(''),
+      startdate:this.fb.control('',Validators.required),
+      enddate:this.fb.control('',Validators.required),
+      reason:this.fb.control('',Validators.required),
     })
 
     //to get leave datas from back end
