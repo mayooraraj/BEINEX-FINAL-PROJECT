@@ -5,6 +5,7 @@ export class Employee{
     birthday: string ='';
     age:string ='';
     gender:string ='';
+    status?:String ='';
     role: string ='';
     phno: string ='';
     bloodgroup: string ='';

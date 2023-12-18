@@ -23,6 +23,9 @@ import { LeaveapplicaionComponent } from './components/leaveapplicaion/leaveappl
 import { ProfileComponent } from './components/profile/profile.component';
 import { ViewleaveComponent } from './components/viewleave/viewleave.component';
 import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-dash-view-leave.component';
+import { BarchartComponent } from './components/barchart/barchart.component';
+import { NgChartsModule } from 'ng2-charts';
+import { DoughnutComponent } from './components/doughnut/doughnut.component';
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-
     ProfileComponent,
     ViewleaveComponent,
     EmpDashViewLeaveComponent,
+    BarchartComponent,
+    DoughnutComponent,
    
   ],
   imports: [
@@ -52,6 +57,7 @@ import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-
     MatListModule,
     MatButtonModule,
     FormsModule,
+    NgChartsModule
 
   ],
   providers: [],

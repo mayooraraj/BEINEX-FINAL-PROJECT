@@ -1,46 +1,19 @@
 {
   "posts": [
     {
-      "firstname": "Mayoora",
-      "lastname": "raj",
-      "birthday": "2023-12-01",
-      "age": 24,
-      "gender": "f",
-      "role": "System analyst",
-      "phno": "9946782303",
-      "bloodgroup": "O+",
-      "email": "mayoora@gmail.com",
-      "password": "1234",
-      "profile": "lady.jpg",
-      "id": 1
-    },
-    {
-      "firstname": "ullas",
-      "lastname": "raj",
-      "birthday": "1999-05-12",
-      "age": 24,
-      "gender": "f",
-      "role": "web developer",
-      "phno": "9946782303",
-      "bloodgroup": "O+",
-      "email": "ullas@gmail.com",
-      "password": "1234",
-      "profile": "profile1.jpg",
-      "id": 2
-    },
-    {
       "firstname": "athira",
       "lastname": "raj",
       "birthday": "1995-02-12",
       "age": 27,
       "gender": "f",
+      "status": "Active",
       "role": "web developer",
       "phno": "9946782303",
       "bloodgroup": "O+",
       "email": "athira@gmail.com",
       "password": "1234",
       "profile": "lady.jpg",
-      "id": 3
+      "id": 5
     },
     {
       "firstname": "theertha",
@@ -48,13 +21,44 @@
       "birthday": "1998-05-16",
       "age": 24,
       "gender": "f",
+      "status": "Active",
       "role": "web designer",
       "phno": "9747824832",
-      "bloodgroup": "",
+      "bloodgroup": "AB+",
       "email": "theertha@gmail.com",
       "password": "1234",
       "profile": "lady.jpg",
-      "id": 4
+      "id": 6
+    },
+    {
+      "firstname": "ullas",
+      "lastname": "raj",
+      "birthday": "1999-05-12",
+      "age": 24,
+      "gender": "f",
+      "status": "Inactive",
+      "role": "web developer",
+      "phno": "9946782303",
+      "bloodgroup": "O+",
+      "email": "ullas@gmail.com",
+      "password": "1234",
+      "profile": "profile1.jpg",
+      "id": 7
+    },
+    {
+      "firstname": "Mayoora",
+      "lastname": "raj",
+      "birthday": "2023-12-01",
+      "age": 24,
+      "gender": "f",
+      "status": "Inactive",
+      "role": "System analyst",
+      "phno": "9946782303",
+      "bloodgroup": "O+",
+      "email": "mayoora@gmail.com",
+      "password": "1234",
+      "profile": "profile1.jpg",
+      "id": 8
     }
   ],
   "comments": [

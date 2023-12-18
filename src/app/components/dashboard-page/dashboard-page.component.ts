@@ -38,6 +38,7 @@ export class DashboardPageComponent implements OnInit{
       birthday:this.fb.control('',Validators.required),
       age:this.fb.control('',Validators.required),
       gender:this.fb.control('',Validators.required),
+      status:this.fb.control('default',Validators.required),
       role:this.fb.control('default',Validators.required),
       phno:this.fb.control('',Validators.required),
       bloodgroup:this.fb.control('default',Validators.required),
@@ -63,6 +64,7 @@ export class DashboardPageComponent implements OnInit{
       birthday:this.BirthDay.value,
       age:this.Age.value,
       gender:this.Gender.value,
+      status:this.Status.value,
       role:this.roleOptions[parseInt(this.Role.value)],
       phno:this.PhoneNumber.value,
       bloodgroup:this.BloodGroup.value,
@@ -107,6 +109,7 @@ export class DashboardPageComponent implements OnInit{
     this.BirthDay.setValue(emp.birthday);
     this.Age.setValue(emp.age);
     this.Gender.setValue(emp.gender);
+    this.Status.setValue(emp.status);
 
     let roleIndex = 0;
     this.roleOptions.forEach((val,index) => {
@@ -143,6 +146,7 @@ export class DashboardPageComponent implements OnInit{
     this.BirthDay.setValue('');
     this.Age.setValue('');
     this.Gender.setValue('');
+    this.Status.setValue('');
     this.Role.setValue('');
     this.PhoneNumber.setValue('');
     this.BloodGroup.setValue('');
@@ -182,6 +186,8 @@ export class DashboardPageComponent implements OnInit{
   public get Password():FormControl {
     return this.employeeForm.get('password') as FormControl;
   }
- 
+ public get Status():FormControl {
+  return this.employeeForm.get('status') as FormControl;
+ }
 
 }
