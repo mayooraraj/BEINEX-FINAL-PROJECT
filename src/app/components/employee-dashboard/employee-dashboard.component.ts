@@ -10,13 +10,11 @@ import { ShareempdataService } from 'src/app/services/shareempdata.service';
 })
 export class EmployeeDashboardComponent implements OnInit{
   loggedInEmployee: Employee | undefined;
-  constructor( private router:Router, private empSharedData:ShareempdataService){
-
+  constructor( private router:Router, private empSharedData:ShareempdataService)
+  {
     //to get loged in user data
       const state= this.router.getCurrentNavigation()?.extras.state
-      console.log(state);
       this.loggedInEmployee = state?.['loggedInEmployee'];
-      console.log(this.loggedInEmployee);
   }
 
   ngOnInit(): void {

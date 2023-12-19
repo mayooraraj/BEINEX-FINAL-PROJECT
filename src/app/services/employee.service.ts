@@ -7,13 +7,13 @@ import { Employee } from '../models/employee.model';
 })
 export class EmployeeService {
   baseUrl = ' http://localhost:3000/posts';
+  xy=6;
 
   constructor(private http:HttpClient) { }
 
   getEmployees(){
     return this.http.get<Employee[]>(this.baseUrl);
-  }
-
+  }  
   postEmployee(employee:Employee){
     return this.http.post<Employee>(this.baseUrl , employee);
   }

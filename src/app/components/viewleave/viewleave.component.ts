@@ -27,8 +27,6 @@ export class ViewleaveComponent implements OnInit {
   ngOnInit(): void {
      
     this.leaveService.getleave().subscribe((res) => {
-    //  console.log('leave data',res);
-     // this.employeeleaveDisplay =res;
       for(let j of res){
         this.employeeleave.unshift(j);
       }
@@ -41,8 +39,9 @@ export class ViewleaveComponent implements OnInit {
        
     })
   }
-
-  approveleave(leaveId: any){
+  //approve button
+  approveleave(leaveId: any)
+  {
     console.log(leaveId);
     alert("Leave Approved");
 
@@ -59,15 +58,6 @@ export class ViewleaveComponent implements OnInit {
             this.employeeleaveDisplay.splice(approvedDataIndex, 1);
         
         }
-    
-    //to change button text when button clicked
-    //var button = document.getElementById("apply");
-    // button!.style.backgroundColor='red';
-    // if (button!.textContent === "Approve") {
-    //     button!.textContent = "Approved";
-    //   } 
-    
-    
   }
 }
 
@@ -88,10 +78,5 @@ export class ViewleaveComponent implements OnInit {
          this.employeeleaveDisplay.splice(approvedDataIndex, 1);
       }
      }
-    //  var button = document.getElementById("reject");
-    // if (button!.textContent === "Reject") {
-    //     button!.textContent = "Rejected";
-    //   } 
-   
   }
 

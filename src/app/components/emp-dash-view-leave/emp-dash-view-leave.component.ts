@@ -10,74 +10,36 @@ import { ShareempdataService } from 'src/app/services/shareempdata.service';
   styleUrls: ['./emp-dash-view-leave.component.scss']
 })
 export class EmpDashViewLeaveComponent implements OnInit {
-
   leaveBackendData:leavemodel[]=[];
-
   loggedInEmployee: Employee | undefined;
 
-  // employeeeName:any;
-
   //to display leave data of presesnt employee
-
     presentEmployees: leavemodel[] = [];
 
+  constructor(private sharedataService:ShareempdataService,private leaveService:LeaveService){}
+  
+  ngOnInit(): void
+   {
+        //logged in employee data
+        this.sharedataService.employeeData$.subscribe((data) => { 
+          console.log('hiiii',data);  
+          this.loggedInEmployee = data;
+        });
 
-  constructor(private empSharedData:ShareempdataService,private leaveService:LeaveService){
-    
-  }
-
-  ngOnInit(): void {
-
-
-      //logged in employee data
-      this.empSharedData.employeeData$.subscribe((data) => { //new
-        console.log('hiiii',data);
-        
-        this.loggedInEmployee = data;
-      });
-
-
-    //leave server data
-
-    this.leaveService.getleave().subscribe(res => {
+      //to get all leave datas
+      this.leaveService.getleave().subscribe(res => {
+      //filter the leave of logged in employee and store in leavebackendData
       this.leaveBackendData = res.filter(e => String(e.eid) === String(this.loggedInEmployee?.id));
-    //  this.employeeeName=this.loggedInEmployee?.firstname;
-      console.log(res);
-    });
-   
-    
-
+        console.log('loged in user leave displayed',res);
+      });  
   }
 
- check(){
-  
-  if(this.leaveBackendData.filter(e => String(e.eid) === String(this.loggedInEmployee?.id))){
-    alert("present");
- }
-
-
-
-
- console.log("clicked",this.leaveBackendData, this.loggedInEmployee);
- }
-
-// check() {
-//   if (this.loggedInEmployee?.id !== undefined) {
-//     const hasLeave = this.leaveBackendData.some(e => e.eid === this.loggedInEmployee?.id);
-//     if (hasLeave) {
-//       // Employee has leave
-//       console.log('Employee has leave');
-//       // You can add further logic here
-//     } else {
-//       // Employee does not have leave
-//       console.log('Employee does not have leave');
-//       // You can add further logic here
-//     }
-//   }
-// }
-
-  
-
+//  check(){
+//   if(this.leaveBackendData.filter(e => String(e.eid) === String(this.loggedInEmployee?.id))){
+//     alert("present");
+//  }
+//  console.log("clicked",this.leaveBackendData, this.loggedInEmployee);
+//  }
 
 }
 

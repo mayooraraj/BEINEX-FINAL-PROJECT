@@ -11,6 +11,21 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class DoughnutComponent implements OnInit {
 
   employees:Employee[]; //1
+  activeEmployees:number=0;
+  InactiveEmployees:number=0;
+
+  doughnutChartData ={ 
+    labels:["Active","Inactive"],
+    datasets:[
+      {
+        //data:[12,2],
+       data:[(this.activeEmployees),this.InactiveEmployees],
+        label:'Active and Inactive',
+        fill:true,
+        backgroundColor: ['rgb(105, 196, 105)', 'red'],
+      }
+    ]
+}
 
   constructor(private employeeService:EmployeeService){
     this.employees =[];
@@ -21,26 +36,16 @@ export class DoughnutComponent implements OnInit {
     this.employeeService.getEmployees().subscribe(res => {
       this.employees = res;
 
-      const activeEmployees = this.employees.filter(e => e.status === 'Active');
-      console.log('Active Employees:', activeEmployees);
+      this.activeEmployees = this.employees.filter(e => e.status === 'Active').length;
+      console.log('Active Employees:', this.activeEmployees);
 
-      const InactiveEmployees = this.employees.filter(e => e.status === 'Inactive');
-      console.log('Inactive Employees:', InactiveEmployees);
-
-
+      this.InactiveEmployees = this.employees.filter(e => e.status === 'Inactive').length;
+      console.log('Inactive Employees:', this.InactiveEmployees); 
+      
+      // Update the chart data after fetching employees
+      this.doughnutChartData.datasets[0].data = [this.activeEmployees, this.InactiveEmployees];
     });
-    
-  }
-  doughnutChartData ={ 
-    labels:["Active","Inactive"],
-    datasets:[
-      {
-        data:[10,3],
-        label:'Active and Inactive',
-        fill:true,
-        backgroundColor: ['rgb(105, 196, 105)', 'red'],
-      }
-    ]
+        
   }
 }
 

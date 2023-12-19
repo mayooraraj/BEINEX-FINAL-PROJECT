@@ -64,63 +64,19 @@
       "firstname": "amal",
       "lastname": "vinod",
       "birthday": "1995-09-29",
-      "age": 28,
+      "age": "23",
       "gender": "m",
       "status": "Active",
-      "role": "System analyst",
-      "phno": "7852631529",
-      "bloodgroup": "O+",
-      "email": "amal@gmail.com",
+      "role": "web developer",
+      "phno": "9747807583",
+      "bloodgroup": "A-",
+      "email": "amalvnd@gmail.com",
       "password": "1234",
       "profile": "profile1.jpg",
       "id": 9
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "status": "approved"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "name": "krishna",
-      "eid": "1",
-      "startdate": "2023-12-08",
-      "enddate": "2023-12-14",
-      "id": 5
-    },
-    {
-      "name": "",
-      "eid": "",
-      "startdate": "2023-12-14",
-      "enddate": "2023-12-13",
-      "reason": "",
-      "id": 6
-    },
-    {
-      "name": "anusree",
-      "eid": 6,
-      "startdate": "",
-      "enddate": "",
-      "reason": "",
-      "id": 7
-    },
-    {
-      "name": "anusree",
-      "eid": 6,
-      "startdate": "2023-12-08",
-      "enddate": "2023-12-04",
-      "reason": "sick leave",
-      "id": 8
-    },
     {
       "name": "prameelarajan",
       "eid": 4,
@@ -130,32 +86,6 @@
       "id": 9
     },
     {
-      "name": "arun",
-      "eid": 5,
-      "startdate": "2023-12-07",
-      "enddate": "2023-12-22",
-      "reason": "Out of station",
-      "id": 10
-    },
-    {
-      "name": "prameelarajan",
-      "eid": 4,
-      "startdate": "2023-12-05",
-      "enddate": "2023-12-22",
-      "reason": "sick leave",
-      "status": "approved",
-      "id": 11
-    },
-    {
-      "name": "hi",
-      "eid": 4,
-      "startdate": "",
-      "enddate": "",
-      "reason": "",
-      "status": "approved",
-      "id": 12
-    },
-    {
       "name": "athiraraj",
       "eid": 5,
       "startdate": "2023-12-06",
@@ -163,24 +93,6 @@
       "reason": "",
       "status": "approved",
       "id": 13
-    },
-    {
-      "name": "athiraraj",
-      "eid": 5,
-      "startdate": "2023-12-01",
-      "enddate": "2023-12-16",
-      "reason": "out of station",
-      "status": "Rejected",
-      "id": 14
-    },
-    {
-      "name": "nayanapavithran",
-      "eid": 5,
-      "startdate": "2023-07-05",
-      "enddate": "2023-07-28",
-      "reason": "out of station",
-      "status": "approved",
-      "id": 15
     },
     {
       "name": "theerthababu",
@@ -199,6 +111,24 @@
       "reason": "out of station",
       "status": "approved",
       "id": 17
+    },
+    {
+      "name": "amalkrishna",
+      "eid": 9,
+      "startdate": "2023-12-15",
+      "enddate": "2023-12-29",
+      "reason": "sick leave",
+      "status": "approved",
+      "id": 18
+    },
+    {
+      "name": "amalvinod",
+      "eid": 9,
+      "startdate": "2023-12-01",
+      "enddate": "2023-12-02",
+      "reason": "out of station",
+      "status": "pending",
+      "id": 19
     }
   ],
   "profile": {

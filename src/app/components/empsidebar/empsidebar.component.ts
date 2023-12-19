@@ -10,11 +10,8 @@ import { Employee } from 'src/app/models/employee.model';
 export class EmpsidebarComponent {
   loggedInEmployee: Employee | undefined;
   constructor( private router:Router){
-
     //to get loged in user data
     const state= this.router.getCurrentNavigation()?.extras.state
-      // console.log(state);
-      this.loggedInEmployee = state?.['loggedInEmployee'];
-    // console.log(this.loggedInEmployee);
+    this.loggedInEmployee = state?.['loggedInEmployee'];
   }
 }

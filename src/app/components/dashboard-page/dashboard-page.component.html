@@ -1,30 +1,4 @@
-    <!-- <mat-toolbar color="primary">
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon >menu</mat-icon>
-            </button>
-            <h1 class="text">HR DASHBOARD</h1> -->
-            <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD EMPLOYEE</button> -->
-        <!-- </mat-toolbar-row>
-    </mat-toolbar>
-
-    <mat-sidenav-container>
-        <mat-sidenav  opened mode="side" [style.width]="'250px'">
-            <mat-nav-list>
-                <a mat-list-item>Dashboard</a>
-                <a mat-list-item>Employees</a>
-                <a mat-list-item>Help</a>
-                <a mat-list-item>Settings</a>
-            </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <div style="height: 90vh;"></div>
-          
-        </mat-sidenav-content>
-    </mat-sidenav-container> -->
-
-
-    <nav class="navbar bg-success">
+<nav class="navbar bg-success">
         <div class="container-fluid">
           <a class="navbar-brand back" href="/hr-dashboard">Back</a>
           <button type="button" class="btn btn-success addemployee" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>ADD EMPLOYEE</button>
@@ -34,9 +8,8 @@
             </div>
           </form>
         </div>
-      </nav>
+</nav>
       
-
     <!-- Button trigger modal -->
  
   <!-- Modal -->
@@ -79,9 +52,6 @@
                     <label for="datepicker" class="form-label">Age</label>
                     <input type="number" class="form-control" id="age" formControlName="age" >
                 </div>
-                <!-- <div class="row mt-3">
-                    <label for="denderpicker" class="text-secondary">Gender</label>
-                </div> -->
                 <div class="row mt-2">
                   <label for="denderpicker" class="text-secondary mt-3">Gender</label>
                     <div class="col mt-4">

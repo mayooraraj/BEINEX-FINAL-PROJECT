@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent implements OnInit{
-  @ViewChild('fileInput') fileInput:any; //ref variable of image in html
+  @ViewChild('fileInput') fileInput:any; //ref variable of image in html is accessed
   @ViewChild('addEmployeeButton') addEmployeeButton:any;
 
   employeeForm:FormGroup;
@@ -73,13 +73,10 @@ export class DashboardPageComponent implements OnInit{
       profile:this.fileInput.nativeElement.files[0]?.name, //give selected file name in array files
     }
      alert('Employee Added Successfully')
-    console.log('now trying',this.employeeForm );
-    //  this.router.navigate(['/employee-detail']);
     //send the created object in backend
     this.employeeService.postEmployee(employee).subscribe((res) => {
-      this.employees.unshift(res); //response is stored in employees and unshift is used instead of push to get last added at top
-      this.clearForm();
-
+    this.employees.unshift(res); //response is stoed at front of array
+    this.clearForm();
     })
   }
 
@@ -100,7 +97,7 @@ export class DashboardPageComponent implements OnInit{
       }
     })
     this.removeEmployee(event);
-    this.addEmployeeButton.nativeElement.click(); 
+    this.addEmployeeButton.nativeElement.click(); //to trigger modal form
   }  
 
   setForm(emp:Employee){

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
-// import { AuthService } from 'src/app/services/auth.service';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
@@ -13,41 +12,37 @@ export class LoginComponent {
 
   employees:Employee[]; //1
 
-  username ="";
-  password ="";
-  errorMsg ="";
+  username ="";  //property to store entered username
+  password ="";   //password
+  errorMsg ="";   //error msg
 
   constructor(private router:Router,private employeeService:EmployeeService){
     this.employees =[];
   }
   ngOnInit(): void {
+    //fetch all employees added
     this.employeeService.getEmployees().subscribe((res) => {
-      this.employees = res;
-      // console.log(this.employees);
-       
+      this.employees = res;  
     })
-  }
-  
+  }  
+
   login(event:Event){
 
-    console.log("Username:", this.username);
-    console.log("Password:", this.password);
-
-    const loginData =this.employees.find(e => e.firstname === this.username)
-    // console.log(loginData);
+    // logged in employee details stored in loginData
+    const loginData =this.employees.find(e => e.email === this.username)
     
-
-    if(this.username.trim().length === 0){ //trim remove white spaces from both end
+    if(this.username.trim().length === 0){ //trim remove white spaces from both ends
       this.errorMsg ="*Username is required";
-    }else if(this.password.trim().length === 0){
+    }
+    else if(this.password.trim().length === 0){
       this.errorMsg = "*Password is required";
     }
     else{
       this.errorMsg ="";
       // let res = this.auth.login(this.username,this.password);
-      if(this.employees.find(e => e.firstname === this.username && e.password === this.password)){
+      if(this.employees.find(e => e.email === this.username && e.password === this.password)){
         localStorage.setItem('token',Math.random().toString());
-        this.router.navigate(['employee-dashboard'],{state:{ loggedInEmployee: loginData }}); //n
+        this.router.navigate(['employee-dashboard'],{state:{ loggedInEmployee: loginData }}); 
       }
       else if(this.username === 'hr' && this.password === '1234'){
         //if hr credential match create a token
@@ -56,6 +51,8 @@ export class LoginComponent {
       }
       else{
         alert("Invalid Credential");
+        this.username='';
+        this.password='';
       }
     }
   }

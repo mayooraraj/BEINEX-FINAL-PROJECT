@@ -10,54 +10,33 @@ import { ShareempdataService } from 'src/app/services/shareempdata.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit{
-  roleOptions = [
-    'hr',
-    'employee',
-    
-  ];
-
- 
-
   // loggedInEmployee: Employee | undefined ;
   loggedInEmployee: any = {}
 
-  constructor(private empSharedData:ShareempdataService,private employeeData:EmployeeService){
-    
-  }
-
+  constructor(private empSharedData:ShareempdataService,private employeeservice:EmployeeService){}
+ 
   ngOnInit(): void {
     this.empSharedData.employeeData$.subscribe((data) => { //new
       this.loggedInEmployee = data;
     });
-  }
-
-  
-  //to edit profile
-
-  onempDataChanged(event: Event): void {
-    // Access the changed value
-    // const changedValue = (event.target as HTMLInputElement).value;
-    //this.loggedInEmployee[(event.target as HTMLInputElement).name] = (event.target as HTMLInputElement).value
-
-
+  } 
+  //this mwthod is triggered whenever the user type something in input field
+  onempDataChanged(event: Event): void
+   { 
     if (this.loggedInEmployee) {
-      // Safely access and update the property
+      // Safely access and update the property based on input elements name
       this.loggedInEmployee[(event.target as HTMLInputElement).name] = (event.target as HTMLInputElement).value;
-    console.log(this.loggedInEmployee);
+      console.log('updatedddddddddddd',this.loggedInEmployee);
     
     }
-   // console.log('Employee ID changed:', changedValue);
-    // You can perform additional actions based on the changed value
   }
-
-  editEmpProfile(){
-    this.employeeData.editEmployee(this.loggedInEmployee.id,this.loggedInEmployee).subscribe((res) => {
-      console.log('updated the employee profile',res);
-      
+  //for the employee to edit personal data 
+  editEmpProfile()
+  {
+    this.employeeservice.editEmployee(this.loggedInEmployee.id,this.loggedInEmployee).subscribe((res) => {
+      console.log('updated the employee profile',res);   
     })
     confirm("Profile Edit Successfully")
-    console.log('cliocked');
-    
+    console.log('cliocked');   
   }
-
 }
