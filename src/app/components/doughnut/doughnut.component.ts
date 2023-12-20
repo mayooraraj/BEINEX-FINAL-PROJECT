@@ -18,8 +18,8 @@ export class DoughnutComponent implements OnInit {
     labels:["Active","Inactive"],
     datasets:[
       {
-        //data:[12,2],
-       data:[(this.activeEmployees),this.InactiveEmployees],
+       data:[4,2],
+      // data:[this.activeEmployees,this.InactiveEmployees],
         label:'Active and Inactive',
         fill:true,
         backgroundColor: ['rgb(105, 196, 105)', 'red'],
@@ -44,8 +44,11 @@ export class DoughnutComponent implements OnInit {
       
       // Update the chart data after fetching employees
       this.doughnutChartData.datasets[0].data = [this.activeEmployees, this.InactiveEmployees];
-    });
-        
+     // this.doughnutChartData[1].data = [0, this.InactiveEmployees];
+
+    });      
   }
+
+
 }
 

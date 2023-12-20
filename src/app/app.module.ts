@@ -28,6 +28,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { DoughnutComponent } from './components/doughnut/doughnut.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,7 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
     BarchartComponent,
     DoughnutComponent,
    
+   
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
     MatListModule,
     MatButtonModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
 
   ],
   providers: [],

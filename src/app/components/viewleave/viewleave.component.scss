@@ -35,16 +35,7 @@ table th, .table td {
 
   /* Mobile view media query */
 @media (max-width: 767px) {
-  // .table {
-  //   width: 100%;
-  //   margin-bottom: 1rem;
-  //   color: #212529;
-  //   border-collapse: collapse;
-  //   overflow-x: auto;
-  //   display: block;
-  //   white-space: nowrap;
-  // }
-
+  
   .table thead, .table tbody, .table th, .table td, .table tr {
     display: block;
   }

@@ -14,7 +14,7 @@
         </div> 
         <div>
             <label for="email">Email ID</label><br>
-            <input type="email" class="form-control" name="email" placeholder="{{loggedInEmployee?.email}}" (input)="onempDataChanged($event)">
+            <input type="email" class="form-control" name="email" readonly placeholder="{{loggedInEmployee?.email}}" (input)="onempDataChanged($event)">
         </div>
     </div>
     <div class="first-row">
@@ -48,6 +48,12 @@
             <input type="text" class="form-control" name="bloodgroup" placeholder="{{loggedInEmployee?.bloodgroup}}"(input)="onempDataChanged($event)" >
         </div>
         
+    </div>
+    <div class="first-row"> 
+        <div>
+            <label for="password">Change Password</label><br>
+            <input type="text" class="form-control" name="password" placeholder="{{loggedInEmployee?.password}}"(input)="onempDataChanged($event)"  >
+        </div>
     </div>
 </form> 
 

@@ -15,7 +15,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/login">Home</a>
+                <a class="nav-link "  href="/login">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/bar-chart">Contact</a>
@@ -28,25 +28,60 @@
         </div>
       </nav>
       <div class="body">
+        <div class="body__left">
+          <h1 class="welcome">Welcome Back !</h1>
+         <!-- <div class="image"></div> -->
+          
+        </div>
         <div class="body__right">
-            <div class="login-form">
-                <div class="form-group">
-                    <label for="uname">Username</label>
-                    <input type="email" name="uname" placeholder="abc@gmail.com" class="form-control" [(ngModel)]="username" />
-                </div>
-                <div class="form-group mt-4">
-                    <label for="pword">Password</label>
-                    <input type="password" name="pword" class="form-control"[(ngModel)]="password" />
-                </div>
-                <div class="btn-container">
-                    <div class="error mt-2">{{errorMsg}}</div>
-                    <button class="btn btn-success mt-4" (click)="login($event)" >Login</button>
+          <div class="login-form">
+
+            <img src="../../../assets/images/login3.png" alt="">
+            <p style="text-align: center;">User</p>
+            <!-- <h3>LogIn Here </h3> -->
+
+            <div class="form-group mt-4">
+              <!-- <label for="uname">Your Name</label> -->
+              <div class="input-field">
+                <i class="fa fa-user"></i>
+                <input type="name" name="username" class="form-control" placeholder="Name"/>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <!-- <label for="uname">Your Email ID</label> -->
+                <div class="input-field">
+                  <i class="fa fa-envelope"></i>
+                  <input type="email" name="uname" placeholder="Email ID" class="form-control" [(ngModel)]="username" />
                 </div>
             </div>
+
+            <div class="form-group mt-4">
+                <!-- <label for="pword">Password</label> -->
+                <div class="input-field">
+                  <i class="fa fa-lock"></i>
+                  <input type="password" name="pword" placeholder="Password" class="form-control"[(ngModel)]="password" />
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <div class="error mt-2 ">{{errorMsg}}</div>
+                <button class="btn btn-success mt-4 form-control"  (click)="login($event)" >Login</button>
+                <label for="">Forgotten Your Password ? </label>
+                <!-- <button class="btn btn-success mt-4 form-control"  >Sign Up</button> -->
+            </div>
+
+            <div class="icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-google-plus"></i>
+            </div>
+        </div>
         </div>
       </div>
-
-      <div class="footer">
+      
+      <!-- <div class="footer">
         <div class="footer__body">
           <div class="footer__icons">
               <i class="fa-brands fa-facebook"></i>
@@ -56,7 +91,7 @@
             </div>
           <h4>Copyright ©Employee Management System 2014.</h4>
         </div>
-      </div>
+      </div> -->
 </body>
 </html>
 

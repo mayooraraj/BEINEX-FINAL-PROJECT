@@ -2,7 +2,7 @@ $navbar-padding: 15px;
 $navbar-item-spacing: 15px; 
 
 .navbar {
-  background-color: #28a745; 
+  background-color: black; 
 }
 
 /* Navbar content container styling */
@@ -33,6 +33,9 @@ $navbar-item-spacing: 15px;
   font-size: 17px;
   margin-left: 30px;
   cursor: pointer;
+}
+.logout{
+  border-radius: 5px;
 }
 
 a:hover{
