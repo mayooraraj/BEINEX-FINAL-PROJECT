@@ -1,7 +1,9 @@
-import { NgClass } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
+import {Chart , registerables} from 'node_modules/chart.js';
 import { Employee } from 'src/app/models/employee.model';
 import { EmployeeService } from 'src/app/services/employee.service';
+Chart.register(...registerables);
+
 
 @Component({
   selector: 'app-doughnut',
@@ -9,46 +11,63 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./doughnut.component.scss']
 })
 export class DoughnutComponent implements OnInit {
-
-  employees:Employee[]; //1
-  activeEmployees:number=0;
-  InactiveEmployees:number=0;
-
-  doughnutChartData ={ 
-    labels:["Active","Inactive"],
-    datasets:[
-      {
-       data:[4,2],
-      // data:[this.activeEmployees,this.InactiveEmployees],
-        label:'Active and Inactive',
-        fill:true,
-        backgroundColor: ['rgb(105, 196, 105)', 'red'],
-      }
-    ]
-}
-
-  constructor(private employeeService:EmployeeService){
+  //to store active and inactive count 
+  activecount:number=0;
+  inactivecount:number=0;
+ 
+  employees:Employee[];
+  constructor(private service:EmployeeService){
     this.employees =[];
   }
- 
+
+
+  chartdata:any;
+
+  activedata:any[]=[];
+  inactivedata:any[]=[];
+
   ngOnInit(): void {
-
-    this.employeeService.getEmployees().subscribe(res => {
-      this.employees = res;
-
-      this.activeEmployees = this.employees.filter(e => e.status === 'Active').length;
-      console.log('Active Employees:', this.activeEmployees);
-
-      this.InactiveEmployees = this.employees.filter(e => e.status === 'Inactive').length;
-      console.log('Inactive Employees:', this.InactiveEmployees); 
+    //to get employee datas and stored the response in employee
+    this.service.getEmployees().subscribe(res => {
+      this.employees= res;
       
-      // Update the chart data after fetching employees
-      this.doughnutChartData.datasets[0].data = [this.activeEmployees, this.InactiveEmployees];
-     // this.doughnutChartData[1].data = [0, this.InactiveEmployees];
+      if(this.employees!=null)
+      {
+          this.activedata.push( this.employees.filter(e => e.status === 'Active').length); 
+          this.activecount =this.employees.filter(e => e.status === 'Active').length;
+           
 
-    });      
+          this.inactivedata.push(this.employees.filter(e => e.status === 'Inactive').length);
+          this.inactivecount = this.employees.filter(e => e.status === 'Inactive').length;
+          
+        }
+        this.RenderChart(this.activedata,this.inactivedata,'doughnut','dochart');
+      }
+    ) 
   }
+  RenderChart(activedata:any,inactivedata:any,type:any,id:any){
 
-
+    const myChart = new Chart(id, {
+      type: type,
+      data: {
+        labels:["Active","Inactive"] ,
+        datasets: [{
+          label: '# of Votes',
+          data: [this.activedata,this.inactivedata],
+          backgroundColor: ['rgb(105, 196, 105)','rgba(255,99,132,0.2)'],
+          borderColor: [ 'rgba(255, 99, 132, 1)'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+  
 }
 

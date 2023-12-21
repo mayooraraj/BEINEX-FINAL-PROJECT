@@ -81,6 +81,9 @@ export class DashboardPageComponent implements OnInit{
   }
 
   removeEmployee(event:any){
+    const confirmation = confirm('Are you sure?');
+    // window confirm return true or false
+    if(confirmation){
     this.employees.forEach((val,index) => {
       if(val.id === parseInt(event)){
         this.employeeService.deleteEmployee(event).subscribe((res) => {
@@ -88,6 +91,7 @@ export class DashboardPageComponent implements OnInit{
         });
       }
     });
+  }
   }
 
   editEmployee(event:any){

@@ -29,7 +29,6 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +44,7 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
     EmpDashViewLeaveComponent,
     BarchartComponent,
     DoughnutComponent,
+   
    
    
   ],

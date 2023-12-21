@@ -1,21 +1,6 @@
 {
   "posts": [
     {
-      "firstname": "theertha",
-      "lastname": "babu",
-      "birthday": "1998-05-16",
-      "age": 24,
-      "gender": "f",
-      "status": "Active",
-      "role": "web designer",
-      "phno": "9747824832",
-      "bloodgroup": "AB+",
-      "email": "theerthababu@gmail.com",
-      "password": "1234",
-      "profile": "lady.jpg",
-      "id": 6
-    },
-    {
       "firstname": "ullas",
       "lastname": "raj",
       "birthday": "1999-05-12",
@@ -46,40 +31,10 @@
       "id": 8
     },
     {
-      "firstname": "amal",
-      "lastname": "vinod",
-      "birthday": "1995-09-29",
-      "age": "23",
-      "gender": "m",
-      "status": "Active",
-      "role": "web developer",
-      "phno": "9747807583",
-      "bloodgroup": "A-",
-      "email": "amalvnd@gmail.com",
-      "password": "amal@12",
-      "profile": "profile1.jpg",
-      "id": 9
-    },
-    {
-      "firstname": "kavya",
+      "firstname": "madhav",
       "lastname": "krishna",
-      "birthday": "2000-12-01",
-      "age": 23,
-      "gender": "f",
-      "status": "Active",
-      "role": "System analyst",
-      "phno": "9946782303",
-      "bloodgroup": "O+",
-      "email": "kavya@gmail.com",
-      "password": "1234",
-      "profile": "lady.jpg",
-      "id": 10
-    },
-    {
-      "firstname": "Madhav",
-      "lastname": "krishna",
-      "birthday": "1998-05-12",
-      "age": "27",
+      "birthday": "1999-12-01",
+      "age": 24,
       "gender": "m",
       "status": "Active",
       "role": "web developer",
@@ -88,7 +43,7 @@
       "email": "madhav@gmail.com",
       "password": "1234",
       "profile": "profile1.jpg",
-      "id": 11
+      "id": 9
     }
   ],
   "comments": [
@@ -98,7 +53,8 @@
       "startdate": "2023-12-06",
       "enddate": "2023-12-09",
       "reason": "",
-      "id": 9
+      "id": 9,
+      "status": "Rejected"
     },
     {
       "name": "athiraraj",
@@ -106,7 +62,7 @@
       "startdate": "2023-12-06",
       "enddate": "2023-12-20",
       "reason": "",
-      "status": "approved",
+      "status": "Rejected",
       "id": 13
     },
     {
@@ -153,6 +109,15 @@
       "reason": "out of station",
       "status": "approved",
       "id": 20
+    },
+    {
+      "name": "Madhavkrishna",
+      "eid": 11,
+      "startdate": "2023-12-01",
+      "enddate": "2023-12-02",
+      "reason": "out of station",
+      "status": "pending",
+      "id": 21
     }
   ],
   "profile": {
