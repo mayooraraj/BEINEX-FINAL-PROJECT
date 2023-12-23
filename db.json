@@ -4,16 +4,16 @@
       "firstname": "ullas",
       "lastname": "raj",
       "birthday": "1999-05-12",
-      "age": 24,
+      "age": "24",
       "gender": "f",
-      "status": "Inactive",
+      "status": "Active",
       "role": "web developer",
-      "phno": "9946782303",
-      "bloodgroup": "O+",
+      "phno": "8086550102",
+      "bloodgroup": "o-",
       "email": "ullas@gmail.com",
       "password": "1234",
       "profile": "profile1.jpg",
-      "id": 7
+      "id": 9
     },
     {
       "firstname": "Mayoora",
@@ -27,97 +27,103 @@
       "bloodgroup": "O+",
       "email": "mayoora@gmail.com",
       "password": "1234",
-      "profile": "profile1.jpg",
-      "id": 8
+      "profile": "lady.jpg",
+      "id": 10
     },
     {
-      "firstname": "madhav",
-      "lastname": "krishna",
-      "birthday": "1999-12-01",
+      "firstname": "theertha",
+      "lastname": "roy",
+      "birthday": "1999-03-16",
       "age": 24,
+      "gender": "f",
+      "status": "Active",
+      "role": "web designer",
+      "phno": "9946782303",
+      "bloodgroup": "AB+",
+      "email": "theertha@gmail.com",
+      "password": "1234",
+      "profile": "lady.jpg",
+      "id": 11
+    },
+    {
+      "firstname": "nayana",
+      "lastname": "pavithran",
+      "birthday": "1998-12-31",
+      "age": 25,
+      "gender": "f",
+      "status": "Active",
+      "role": "quality tester",
+      "phno": "7925860123",
+      "bloodgroup": "O+",
+      "email": "nayana@gmail.com",
+      "password": "1234",
+      "profile": "lady.jpg",
+      "id": 12
+    },
+    {
+      "firstname": "prameela",
+      "lastname": "rajan",
+      "birthday": "1995-11-09",
+      "age": 27,
+      "gender": "f",
+      "status": "Active",
+      "role": "quality tester",
+      "phno": "9747807583",
+      "bloodgroup": "AB+",
+      "email": "prameela@gmail.com",
+      "password": "1234",
+      "profile": "lady.jpg",
+      "id": 13
+    },
+    {
+      "firstname": "amal",
+      "lastname": "vinod",
+      "birthday": "1995-09-29",
+      "age": 28,
+      "gender": "m",
+      "status": "Active",
+      "role": "System analyst",
+      "phno": "8086250201",
+      "bloodgroup": "",
+      "email": "amal@gmail.com",
+      "password": "1234",
+      "profile": "profile1.jpg",
+      "id": 14
+    },
+    {
+      "firstname": "vyshnav",
+      "lastname": "krishna",
+      "birthday": "1998-05-12",
+      "age": 25,
       "gender": "m",
       "status": "Active",
       "role": "web developer",
-      "phno": "9747807583",
+      "phno": "9578231526",
       "bloodgroup": "AB+",
-      "email": "madhav@gmail.com",
+      "email": "vyshnav@gmail.com",
       "password": "1234",
       "profile": "profile1.jpg",
-      "id": 9
+      "id": 15
     }
   ],
   "comments": [
     {
-      "name": "prameelarajan",
-      "eid": 4,
-      "startdate": "2023-12-06",
-      "enddate": "2023-12-09",
-      "reason": "",
-      "id": 9,
-      "status": "Rejected"
-    },
-    {
-      "name": "athiraraj",
-      "eid": 5,
-      "startdate": "2023-12-06",
-      "enddate": "2023-12-20",
-      "reason": "",
-      "status": "Rejected",
-      "id": 13
-    },
-    {
-      "name": "theerthababu",
-      "eid": 6,
-      "startdate": "2023-12-08",
-      "enddate": "2023-12-14",
-      "reason": "sick leave",
-      "status": "approved",
-      "id": 16
-    },
-    {
-      "name": "Mayooraraj",
-      "eid": 1,
-      "startdate": "2023-12-02",
-      "enddate": "2023-12-21",
-      "reason": "out of station",
-      "status": "approved",
-      "id": 17
-    },
-    {
-      "name": "amalkrishna",
-      "eid": 9,
-      "startdate": "2023-12-15",
-      "enddate": "2023-12-29",
-      "reason": "sick leave",
-      "status": "approved",
-      "id": 18
-    },
-    {
-      "name": "amalvinod",
-      "eid": 9,
+      "name": "theertharoy",
+      "eid": 11,
       "startdate": "2023-12-01",
       "enddate": "2023-12-02",
-      "reason": "out of station",
+      "reason": "sick leave",
       "status": "pending",
       "id": 19
     },
     {
-      "name": "Madhavkrishna",
-      "eid": 11,
-      "startdate": "2023-12-08",
-      "enddate": "2023-12-09",
-      "reason": "out of station",
-      "status": "approved",
-      "id": 20
-    },
-    {
-      "name": "Madhavkrishna",
-      "eid": 11,
-      "startdate": "2023-12-01",
-      "enddate": "2023-12-02",
+      "name": "ullasraj",
+      "eid": 9,
+      "startdate": "2023-12-02",
+      "enddate": "2023-12-03",
       "reason": "out of station",
       "status": "pending",
-      "id": 21
+      "id": 20
     }
   ],
   "profile": {

@@ -21,15 +21,10 @@
       <tr *ngFor="let leave of employeeleaveDisplay;let i = index">
         <td scope="row">{{i+1}}</td>
         <td scope="row">{{leave.eid}}</td>
-        <!-- <td>
-          <ng-container *ngIf="employees && employees.length">
-            {{ employees.find(e => String(e.id) === String(leave.eid)).firstname }}
-          </ng-container>
-        </td> -->
-        <td>{{leave.name}}</td>
+        <td>{{leave.name | titlecase}}</td>
         <td>{{leave.startdate}}</td>
         <td>{{leave.enddate}}</td>
-        <td>{{leave.reason}}</td>
+        <td>{{leave.reason | titlecase}}</td>
         <td>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button"  id="apply" class="btn btn-success approved"   (click)="approveleave(leave?.id)">Approve</button>

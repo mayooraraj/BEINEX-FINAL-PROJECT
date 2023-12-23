@@ -1,15 +1,13 @@
 .emp-card{
-    width: 75%;
+    width: 65%;
     margin: auto;
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
+    border: 2px solid black;
+    box-shadow: 8px 8px 10px  black;
     border-radius: 10px;
     padding: 20px;
-    background-color: rgb(132, 187, 132);
-   
-  
-
+  // background-color: rgb(132, 187, 132);
     &__left{
         display: flex;
         justify-content: center;
@@ -18,9 +16,9 @@
             width: 200px;
             height: 200px;
             display: flex;
+            border: 4px solid black;
             background-color: white;
             padding: 10px;
-           // box-shadow: 10px 10px 10px ;
         }
     }
     &__right{
@@ -31,6 +29,7 @@
             justify-content: space-between; 
             margin-bottom: 10px;
         }
+       
     }
     &__name{
         span{
@@ -48,6 +47,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .edit:hover{
+            background-color: green;
+            color: white;
+        }
+        .delete:hover{
+            background-color: red;
+            color: white;
+        }
     }
 }
 

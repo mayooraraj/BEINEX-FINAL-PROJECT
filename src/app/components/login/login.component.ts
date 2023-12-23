@@ -44,7 +44,7 @@ export class LoginComponent {
         localStorage.setItem('token',Math.random().toString());
         this.router.navigate(['employee-dashboard'],{state:{ loggedInEmployee: loginData }}); 
       }
-      else if(this.username === 'hr' && this.password === '1234'){
+      else if(this.username === 'hr@gmail.com' && this.password === '1234'){
         //if hr credential match create a token
         localStorage.setItem('token',Math.random().toString());
         this.router.navigate(['hr-dashboard']);

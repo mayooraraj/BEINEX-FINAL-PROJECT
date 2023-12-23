@@ -2,8 +2,8 @@
     <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">Employee ID</th>
-        <th scope="col">Employee Name</th>
+        <!-- <th scope="col">Employee ID</th>
+        <th scope="col">Employee Name</th> -->
         <th scope="col">Start Date</th>
         <th scope="col">End Date</th>
         <th scope="col">Status</th>
@@ -12,10 +12,10 @@
     <tbody>
       <tr *ngFor="let leave of leaveBackendData ;let i = index"> 
         <td scope="row">{{i+1}}</td>
-        <td scope="row">{{leave.eid}}</td>
-        <td>{{loggedInEmployee?.firstname}}</td>
-        <td>{{leave.startdate}}</td>
-        <td>{{leave.enddate}}</td>
+        <!-- <td scope="row">{{leave.eid}}</td> -->
+        <!-- <td>{{loggedInEmployee?.firstname}}</td> -->
+        <td>{{leave.startdate | date}}</td>
+        <td>{{leave.enddate | date}}</td>
         <td>{{leave.status}}</td>
       </tr>
     </tbody>

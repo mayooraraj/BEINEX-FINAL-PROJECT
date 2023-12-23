@@ -4,15 +4,11 @@ $navbar-item-spacing: 15px;
 .navbar {
   background-color: black; 
 }
-
-/* Navbar content container styling */
 .navcontent {
   display: flex;
   justify-content:space-between;
   align-items: center;
 }
-
-/* Navbar brand styling */
 .navbar-brand {
   color: #fff; 
   font-weight: bold;
@@ -43,9 +39,6 @@ a:hover{
 }
 
 
-
-
-
 //mobile
 @media (max-width: 768px) {
   .navbar-brand{
@@ -57,12 +50,9 @@ a:hover{
     flex-direction: column; 
     text-align: center;
   }
-
-  // .nav-link {
-  //   color:white;
-  //   margin: 0px 0; 
-  //   display:table-column-group;
-  // }
+  .chart{
+    flex-wrap: wrap;
+  }
 }
 
 //tablet

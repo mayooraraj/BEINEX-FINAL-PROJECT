@@ -19,15 +19,9 @@ export class LeaveapplicaionComponent {
   loggedInEmployee: Employee | undefined;
 
   constructor(private router:Router,private leaveService:LeaveService,private fb:FormBuilder,private empSharedData:ShareempdataService ){
-    // const state= this.router.getCurrentNavigation()?.extras.state
     this.employeeleaveDisplay=this.employeeleave;
-    //   console.log(state);
     this.leaveForm = fb.group({});
-    // const state= this.router.getCurrentNavigation()?.extras.state
-    // console.log(state);
-    // this.loggedInEmployee = state?.['loggedInEmployee'];
-    //console.log('lreave',this.loggedInEmployee);
-
+    
   }
 
   ngOnInit(): void {
@@ -45,7 +39,6 @@ export class LeaveapplicaionComponent {
       
     })
 
-
     //to get logined employee data
     this.empSharedData.employeeData$.subscribe((data) => { //new
       this.loggedInEmployee = data;
@@ -54,7 +47,6 @@ export class LeaveapplicaionComponent {
       this.leaveForm.get('name')?.setValue(`${this.loggedInEmployee?.firstname}${this.loggedInEmployee?.lastname}`);
       this.leaveForm.get('eid')?.setValue(this.loggedInEmployee?.id);
     });
-
    
   }
 
@@ -67,7 +59,7 @@ export class LeaveapplicaionComponent {
       startdate:this.StartDate.value,
       enddate:this.EndDate.value,
       reason:this.Reason.value,
-      status:'pending',//new
+      status:'pending',
     };
     this.leaveService.postleave(data).subscribe((res) => {
         this.employeeleave.unshift(res);

@@ -11,7 +11,7 @@ export class BarchartComponent {
     labels:["sun","mon","tue","wed","thu","fri","sat"],
     datasets:[
       {
-        data:[8,2,0,6,3,1,3],
+        data:[4,2,0,2,0,1,3],
         label:'Leaves Taken By Employees',
         fill:true,
         backgroundColor: ['red'],

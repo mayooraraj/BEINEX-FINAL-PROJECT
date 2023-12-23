@@ -6,6 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ShareempdataService {
 
+  //to share logged in user data
+
   constructor() { }  
   //service contain logined user data
   private employeeDataSubject = new BehaviorSubject<any>(null);

@@ -16,12 +16,8 @@ export class ViewleaveComponent implements OnInit {
   employeeleaveDisplay:leavemodel[];
   employees:Employee[]=[];
 
-  
-
   constructor(private leaveService:LeaveService,private employeeService:EmployeeService ){
     this.employeeleaveDisplay=this.employeeleave;
-    // console.log('employee display',this.employeeleaveDisplay);
-    
   }
 
   ngOnInit(): void {
@@ -34,9 +30,7 @@ export class ViewleaveComponent implements OnInit {
       
     })
     this.employeeService.getEmployees().subscribe((res) => {
-      this.employees = res;
-      // console.log(this.employees);
-       
+      this.employees = res;  
     })
   }
   //approve button

@@ -9,8 +9,8 @@
                 <span>{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
             </div>
             <div class="emp-card__btn"><!--two button-->
-                <button type="button" class="btn btn-success" (click)=" editEmployeeClicked()">Edit</button>
-                <button type="button" class="btn btn-danger" (click)="deleteEmployeeClicked()">Delete</button> 
+                <button type="button " class="btn border-success edit" (click)=" editEmployeeClicked()">Edit</button>
+                <button type="button " class="btn border-danger delete" (click)="deleteEmployeeClicked()">Delete</button> 
             </div>
         </div>
 
@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td>Blood Group</td>
-                            <td>{{employee.bloodgroup}}</td>
+                            <td>{{employee.bloodgroup | uppercase}}</td>
                         </tr>
                         <tr>
                             <td>Age</td>

@@ -11,7 +11,7 @@ Chart.register(...registerables);
   styleUrls: ['./doughnut.component.scss']
 })
 export class DoughnutComponent implements OnInit {
-  //to store active and inactive count 
+  //to store active and inactive count to display as text
   activecount:number=0;
   inactivecount:number=0;
  
@@ -54,7 +54,7 @@ export class DoughnutComponent implements OnInit {
         datasets: [{
           label: '# of Votes',
           data: [this.activedata,this.inactivedata],
-          backgroundColor: ['rgb(105, 196, 105)','rgba(255,99,132,0.2)'],
+          backgroundColor:['green','red'],
           borderColor: [ 'rgba(255, 99, 132, 1)'],
           borderWidth: 1
         }]

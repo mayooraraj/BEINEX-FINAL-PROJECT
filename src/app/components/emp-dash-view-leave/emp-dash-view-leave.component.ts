@@ -12,9 +12,8 @@ import { ShareempdataService } from 'src/app/services/shareempdata.service';
 export class EmpDashViewLeaveComponent implements OnInit {
   leaveBackendData:leavemodel[]=[];
   loggedInEmployee: Employee | undefined;
-
   //to display leave data of presesnt employee
-    presentEmployees: leavemodel[] = [];
+  presentEmployees: leavemodel[] = [];
 
   constructor(private sharedataService:ShareempdataService,private leaveService:LeaveService){}
   
@@ -33,13 +32,5 @@ export class EmpDashViewLeaveComponent implements OnInit {
         console.log('loged in user leave displayed',res);
       });  
   }
-
-//  check(){
-//   if(this.leaveBackendData.filter(e => String(e.eid) === String(this.loggedInEmployee?.id))){
-//     alert("present");
-//  }
-//  console.log("clicked",this.leaveBackendData, this.loggedInEmployee);
-//  }
-
 }
 

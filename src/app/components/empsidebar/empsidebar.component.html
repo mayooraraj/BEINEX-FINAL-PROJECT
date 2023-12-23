@@ -4,7 +4,7 @@
     </div>
     <div class="user">
         <img src="../../../assets/images/{{loggedInEmployee?.profile}}" alt="">
-        <h4 class="name">Hi ! {{loggedInEmployee?.firstname }} {{ loggedInEmployee?.lastname }}</h4>
+        <h4 class="name">Hi ! {{loggedInEmployee?.firstname | titlecase }} {{ loggedInEmployee?.lastname | titlecase}}</h4>
         <p class="email">{{loggedInEmployee?.email}}</p>
     </div>
     <div class="menu">

@@ -20,11 +20,11 @@
     <div class="first-row">
         <div class="div">
             <label for="name">First Name</label><br>
-            <input type="text" class="form-control" name="firstname" placeholder="{{loggedInEmployee?.firstname}} "  (input)="onempDataChanged($event)">
+            <input type="text" class="form-control" name="firstname" placeholder="{{loggedInEmployee?.firstname | titlecase}} "  (input)="onempDataChanged($event)">
         </div>
         <div class="div">
             <label for="name">Last Name</label><br>
-            <input type="text" class="form-control" name="lastname" placeholder="{{loggedInEmployee?.lastname}} " (input)="onempDataChanged($event)">
+            <input type="text" class="form-control" name="lastname" placeholder="{{loggedInEmployee?.lastname | titlecase}} " (input)="onempDataChanged($event)">
         </div>  
     </div>
     <div class="first-row">

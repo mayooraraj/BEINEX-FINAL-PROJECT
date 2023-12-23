@@ -45,15 +45,11 @@ export class DashboardPageComponent implements OnInit{
       email:this.fb.control('',[Validators.required, Validators.email]),
       password:this.fb.control('',Validators.required),
     });
-   
-    
-    
     this.employeeService.getEmployees().subscribe(res =>{
       for(let emp of res){
         this.employees.unshift(emp);
       }
-      this.employeesToDisplay = this.employees;
-      
+      this.employeesToDisplay = this.employees;  
     })
   }
 
@@ -85,6 +81,7 @@ export class DashboardPageComponent implements OnInit{
     // window confirm return true or false
     if(confirmation){
     this.employees.forEach((val,index) => {
+      
       if(val.id === parseInt(event)){
         this.employeeService.deleteEmployee(event).subscribe((res) => {
           this.employees.splice(index,1);
