@@ -53,6 +53,11 @@ export class LeaveapplicaionComponent {
   //apply button click function
   applyemployeeleave(){
 
+    if (!this.StartDate.value || !this.EndDate.value || !this.Reason.value) {
+      alert("Please fill in all the required fields");
+      return; // Do not proceed with submission if validation fails
+    }
+
     let data:leavemodel ={
       name:this.Name.value,
       eid:this.Id.value,

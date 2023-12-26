@@ -21,7 +21,7 @@ export class EmpDashViewLeaveComponent implements OnInit {
    {
         //logged in employee data
         this.sharedataService.employeeData$.subscribe((data) => { 
-          console.log('hiiii',data);  
+          console.log(data);  
           this.loggedInEmployee = data;
         });
 

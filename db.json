@@ -11,7 +11,7 @@
       "phno": "8086550102",
       "bloodgroup": "o-",
       "email": "ullas@gmail.com",
-      "password": "1234",
+      "password": "12345",
       "profile": "profile1.jpg",
       "id": 9
     },
@@ -76,25 +76,10 @@
       "id": 13
     },
     {
-      "firstname": "amal",
-      "lastname": "vinod",
-      "birthday": "1995-09-29",
-      "age": 28,
-      "gender": "m",
-      "status": "Active",
-      "role": "System analyst",
-      "phno": "8086250201",
-      "bloodgroup": "",
-      "email": "amal@gmail.com",
-      "password": "1234",
-      "profile": "profile1.jpg",
-      "id": 14
-    },
-    {
       "firstname": "vyshnav",
       "lastname": "krishna",
       "birthday": "1998-05-12",
-      "age": 25,
+      "age": 28,
       "gender": "m",
       "status": "Active",
       "role": "web developer",
@@ -102,7 +87,7 @@
       "bloodgroup": "AB+",
       "email": "vyshnav@gmail.com",
       "password": "1234",
-      "profile": "profile1.jpg",
+      "profile": "profile3.jpg",
       "id": 15
     }
   ],
@@ -122,8 +107,17 @@
       "startdate": "2023-12-02",
       "enddate": "2023-12-03",
       "reason": "out of station",
-      "status": "pending",
+      "status": "Rejected",
       "id": 20
+    },
+    {
+      "name": "ullasraj",
+      "eid": 9,
+      "startdate": "2023-12-26",
+      "enddate": "2023-12-27",
+      "reason": "sick leave",
+      "status": "pending",
+      "id": 21
     }
   ],
   "profile": {

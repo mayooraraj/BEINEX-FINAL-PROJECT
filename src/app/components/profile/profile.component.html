@@ -45,7 +45,7 @@
         </div>
         <div>
             <label for="bloodgroup">Blood Group</label>
-            <input type="text" class="form-control" name="bloodgroup" placeholder="{{loggedInEmployee?.bloodgroup}}"(input)="onempDataChanged($event)" >
+            <input type="text" class="form-control" name="bloodgroup" placeholder="{{loggedInEmployee?.bloodgroup | uppercase}}"(input)="onempDataChanged($event)" >
         </div>
         
     </div>

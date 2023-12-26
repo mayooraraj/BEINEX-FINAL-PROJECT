@@ -115,14 +115,19 @@ a:hover{
   }
   
   }
-
 }
 
 //mobile
 
-@media(max-width:"768px"){
+@media(max-width:'768px'){
   .body{
    flex-wrap: wrap;
+   &__left{
+    display: none;
+   }
+   .login-form{
+    width: 100%;
+   }
   }
 }
 

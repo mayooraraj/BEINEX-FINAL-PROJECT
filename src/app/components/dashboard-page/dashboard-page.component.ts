@@ -54,6 +54,24 @@ export class DashboardPageComponent implements OnInit{
   }
 
   addEmployee(){
+    if (
+      !this.FirstName.value ||
+      !this.LastName.value ||
+      !this.BirthDay.value ||
+      !this.Age.value ||
+      !this.Gender.value ||
+      !this.Status.value ||
+      !this.Role.value ||
+      !this.PhoneNumber.value ||
+      !this.BloodGroup.value ||
+      !this.Email.value ||
+      !this.Password.value ||
+      !this.fileInput.nativeElement.files[0]
+    ) {
+      alert("Please fill in all the required fields");
+      return; // Do not proceed with submission if validation fails
+    }
+
     let employee:Employee={  //employee is the class name
       firstname:this.FirstName.value,
       lastname:this.LastName.value,

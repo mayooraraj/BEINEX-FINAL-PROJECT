@@ -27,20 +27,19 @@ export class DoughnutComponent implements OnInit {
   inactivedata:any[]=[];
 
   ngOnInit(): void {
-    //to get employee datas and stored the response in employee
+    //to get employee datas and stored the response in employees
     this.service.getEmployees().subscribe(res => {
       this.employees= res;
       
       if(this.employees!=null)
       {
+          //to get active employees
           this.activedata.push( this.employees.filter(e => e.status === 'Active').length); 
           this.activecount =this.employees.filter(e => e.status === 'Active').length;
-           
-
+           //to get inactive employees
           this.inactivedata.push(this.employees.filter(e => e.status === 'Inactive').length);
-          this.inactivecount = this.employees.filter(e => e.status === 'Inactive').length;
-          
-        }
+          this.inactivecount = this.employees.filter(e => e.status === 'Inactive').length; 
+      }
         this.RenderChart(this.activedata,this.inactivedata,'doughnut','dochart');
       }
     ) 
@@ -55,8 +54,7 @@ export class DoughnutComponent implements OnInit {
           label: '# of Votes',
           data: [this.activedata,this.inactivedata],
           backgroundColor:['green','red'],
-          borderColor: [ 'rgba(255, 99, 132, 1)'],
-          borderWidth: 1
+          borderWidth: 10
         }]
       },
       options: {
