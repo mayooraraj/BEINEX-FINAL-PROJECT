@@ -8,7 +8,7 @@ import { Employee } from 'src/app/models/employee.model';
   styleUrls: ['./employee-detail.component.scss']
 })
 export class EmployeeDetailComponent implements OnInit {
-  @Input() employee:Employee;
+  @Input() employee:Employee; //to access employee data from parent
   @Output() onRemoveEmployee = new EventEmitter<number>();
   @Output() onEditEmployee = new EventEmitter<number>();
 

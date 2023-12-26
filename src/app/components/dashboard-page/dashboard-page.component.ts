@@ -79,7 +79,7 @@ export class DashboardPageComponent implements OnInit{
       age:this.Age.value,
       gender:this.Gender.value,
       status:this.Status.value,
-      role:this.roleOptions[parseInt(this.Role.value)],
+      role:this.roleOptions[parseInt(this.Role.value)], //map value obtained from i/p field to arrray
       phno:this.PhoneNumber.value,
       bloodgroup:this.BloodGroup.value,
       email:this.Email.value,
@@ -89,7 +89,7 @@ export class DashboardPageComponent implements OnInit{
      alert('Employee Added Successfully')
     //send the created object in backend
     this.employeeService.postEmployee(employee).subscribe((res) => {
-    this.employees.unshift(res); //response is stoed at front of array
+    this.employees.unshift(res); //response is stored at front of array
     this.clearForm();
     })
   }

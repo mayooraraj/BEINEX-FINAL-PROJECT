@@ -89,6 +89,21 @@
       "password": "1234",
       "profile": "profile3.jpg",
       "id": 15
+    },
+    {
+      "firstname": "krithi",
+      "lastname": "reddy",
+      "birthday": "1999-05-23",
+      "age": 24,
+      "gender": "f",
+      "status": "Active",
+      "role": "web developer",
+      "phno": "9947856320",
+      "bloodgroup": "O+",
+      "email": "krithi@gmail.com",
+      "password": "1234",
+      "profile": "profile2.jpg",
+      "id": 16
     }
   ],
   "comments": [
@@ -111,12 +126,12 @@
       "id": 20
     },
     {
-      "name": "ullasraj",
-      "eid": 9,
-      "startdate": "2023-12-26",
-      "enddate": "2023-12-27",
-      "reason": "sick leave",
-      "status": "pending",
+      "name": "krithireddy",
+      "eid": 16,
+      "startdate": "2023-12-27",
+      "enddate": "2023-12-28",
+      "reason": "out of station",
+      "status": "approved",
       "id": 21
     }
   ],
