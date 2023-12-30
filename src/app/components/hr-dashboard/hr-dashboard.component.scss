@@ -2,8 +2,9 @@ $navbar-padding: 15px;
 $navbar-item-spacing: 15px; 
 
 .navbar {
-  background-color: black; 
+  background-color: #17233f; 
 }
+
 .navcontent {
   display: flex;
   justify-content:space-between;
@@ -31,11 +32,15 @@ $navbar-item-spacing: 15px;
   cursor: pointer;
 }
 .logout{
-  border-radius: 5px;
+  img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+  }
 }
 
 a:hover{
-    color: yellow;
+    color: blue;
 }
 
 

@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit{
   onempDataChanged(event: Event): void
    { 
     if (this.loggedInEmployee) {
-      // Safely access and update the property based on input elements name
+      // Safely access and update the property of loggedInEmployee based on 'name'
       this.loggedInEmployee[(event.target as HTMLInputElement).name] = (event.target as HTMLInputElement).value;
     }
   }

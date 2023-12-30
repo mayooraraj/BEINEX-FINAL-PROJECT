@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-success">
+<nav class="navbar navbar-expand-lg  ">
   <div class="container-fluid navcontent">
-    <a class="navbar-brand back" href="/hr-dashboard">Back</a>
+    <a class="navbar-back" href="/hr-dashboard">back</a>
     <a class="navbar-brand" href="/login">Employee Management System</a>
   </div>
 </nav>
@@ -26,10 +26,12 @@
         <td>{{leave.enddate}}</td>
         <td>{{leave.reason | titlecase}}</td>
         <td>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button"  id="apply" class="btn btn-success approved"   (click)="approveleave(leave?.id)">Approve</button>
+            <div class="btn-group" role="group" aria-label="Basic example" *ngIf="leave.status ==='pending'">
+                <button type="button"  id="apply" class="btn btn-success approved"(click)="approveleave(leave?.id)">Approve</button>
                 <button type="button" id="reject" class="btn btn-danger" (click)="rejectedleave(leave?.id)">Reject</button>
               </div>
+              <p *ngIf="leave.status === 'approved'" class="text-success">Approved</p>
+              <p *ngIf="leave.status === 'Rejected'" class="text-danger">Rejected</p>
         </td>
       </tr>
     </tbody>

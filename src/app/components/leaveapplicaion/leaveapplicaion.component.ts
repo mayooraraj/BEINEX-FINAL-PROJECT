@@ -44,7 +44,7 @@ export class LeaveapplicaionComponent {
       this.loggedInEmployee = data;
 
       //to set employee id and name in the form controls
-      this.leaveForm.get('name')?.setValue(`${this.loggedInEmployee?.firstname}${this.loggedInEmployee?.lastname}`);
+      this.leaveForm.get('name')?.setValue(`${this.loggedInEmployee?.firstname} ${this.loggedInEmployee?.lastname}`);
       this.leaveForm.get('eid')?.setValue(this.loggedInEmployee?.id);
     });
    
@@ -70,6 +70,7 @@ export class LeaveapplicaionComponent {
         this.employeeleave.unshift(res);
     })
     alert("Leave Requested Successfully");
+    this.router.navigate(['employee-dashboard', 'emp-dash-viewleave']);
     this.StartDate.setValue('');
     this.EndDate.setValue('');
     this.Reason.setValue('');

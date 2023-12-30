@@ -26,6 +26,7 @@ import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { DoughnutComponent } from './components/doughnut/doughnut.component';
+import { CardViewleaveComponent } from './components/card-viewleave/card-viewleave.component';
 
 
 
@@ -44,6 +45,7 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
     EmpDashViewLeaveComponent,
     BarchartComponent,
     DoughnutComponent,
+    CardViewleaveComponent,
    
    
    

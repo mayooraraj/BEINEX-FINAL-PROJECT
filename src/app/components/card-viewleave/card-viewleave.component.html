@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg  ">
+    <div class="container-fluid navcontent">
+      <a class="navbar-back" href="/addemployee">back</a>
+      <a class="navbar-brand" href="/login">Employee Management System</a>
+    </div>
+</nav>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Reason</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leavedata ;let i = index">  
+        <td scope="row">{{i+1}}</td>
+        <td>{{leave.startdate}}</td>
+        <td>{{leave.enddate}}</td>
+        <td>{{leave.reason}}</td>
+        <td>{{leave.status}}</td>
+      </tr>
+    </tbody>
+  </table>

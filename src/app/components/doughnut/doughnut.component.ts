@@ -53,7 +53,7 @@ export class DoughnutComponent implements OnInit {
         datasets: [{
           label: '# of Votes',
           data: [this.activedata,this.inactivedata],
-          backgroundColor:['green','red'],
+          backgroundColor:['rgb(144, 238, 144)',' rgb(254,111,94)'],
           borderWidth: 10
         }]
       },

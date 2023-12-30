@@ -11,6 +11,7 @@ export class EmployeeDetailComponent implements OnInit {
   @Input() employee:Employee; //to access employee data from parent
   @Output() onRemoveEmployee = new EventEmitter<number>();
   @Output() onEditEmployee = new EventEmitter<number>();
+  @Output() onViewLeave =  new EventEmitter<number>();
 
   constructor(){
     this.employee ={
@@ -40,5 +41,9 @@ export class EmployeeDetailComponent implements OnInit {
  editEmployeeClicked(){
     this.onEditEmployee.emit(this.employee.id);
  }
+ viewLeave(){
+  this.onViewLeave.emit(this.employee.id);
+ }
+
 
 }

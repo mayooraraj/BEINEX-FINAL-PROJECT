@@ -1,4 +1,4 @@
-<nav class="navbar bg-success">
+<nav class="navbar ">
         <div class="container-fluid">
           <a class="navbar-brand back" href="/hr-dashboard">Back</a>
           <button type="button" class="btn  addemployee" data-bs-toggle="modal" data-bs-target="#exampleModal" #addEmployeeButton>ADD EMPLOYEE</button>
@@ -152,7 +152,7 @@
 
     <div class=" mt-4" *ngFor="let employee of employeesToDisplay; let ei =index">
       <div class="col">
-          <app-employee-detail [employee]="employee" (onRemoveEmployee)="removeEmployee($event)" (onEditEmployee)="editEmployee($event)"></app-employee-detail>
+          <app-employee-detail [employee]="employee" (onRemoveEmployee)="removeEmployee($event)" (onEditEmployee)="editEmployee($event)" (onViewLeave)="viewLeave($event)"></app-employee-detail>
            
         </div>
     </div>

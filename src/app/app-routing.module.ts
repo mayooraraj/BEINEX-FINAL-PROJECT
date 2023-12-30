@@ -11,6 +11,7 @@ import { ViewleaveComponent } from './components/viewleave/viewleave.component';
 import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-dash-view-leave.component';
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { authGuard } from './guards/auth.guard';
+import { CardViewleaveComponent } from './components/card-viewleave/card-viewleave.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'employee-detail',component:EmployeeDetailComponent,canActivate:[authGuard]},
   {path:'bar-chart',component:BarchartComponent,canActivate:[authGuard]},
   {path:'view-leave',component:ViewleaveComponent,canActivate:[authGuard]},
+  {path:'card-leave',component:CardViewleaveComponent,canActivate:[authGuard]},
   
   {
     path:'employee-dashboard',component:EmployeeDashboardComponent,

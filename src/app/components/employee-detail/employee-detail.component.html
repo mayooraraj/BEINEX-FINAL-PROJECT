@@ -10,7 +10,8 @@
             </div>
             <div class="emp-card__btn"><!--two button-->
                 <button type="button " class="btn border-success edit" (click)=" editEmployeeClicked()">Edit</button>
-                <button type="button " class="btn border-danger delete" (click)="deleteEmployeeClicked()">Delete</button> 
+                <button type="button " class="btn border-danger delete" (click)="deleteEmployeeClicked()">Delete</button>
+                
             </div>
         </div>
 
@@ -50,9 +51,15 @@
                             <td>Status</td>
                             <td>{{employee.status}}</td>
                         </tr>
+                        <tr>
+                            <td>
+                                <a (click)="viewLeave()"> View Leave</a>
+                            </td>
+                        </tr>
 
-                    </tbody>
+                    </tbody> 
                 </table>
+                
         </div>
     </div>
 

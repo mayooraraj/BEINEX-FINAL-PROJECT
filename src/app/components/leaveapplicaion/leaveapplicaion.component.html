@@ -1,4 +1,3 @@
-
 <div class="leave-form">
     <form [formGroup]="leaveForm">
     <h2 class="text">Leave Application Form</h2>
@@ -6,11 +5,11 @@
     <div class="row mb-3">
         <div class="col">
             <label for="Input1" class="form-label">Employee Name</label>
-            <input class="form-control" type="text" formControlName="name" placeholder="{{loggedInEmployee?.firstname}} {{ loggedInEmployee?.lastname}}" readonly>
+            <input class="form-control" type="text" formControlName="name" readonly>
         </div>
         <div class="col">
             <label for="Input2" class="form-label">Employee ID</label>
-            <input class="form-control" type="text" formControlName="eid" placeholder="{{loggedInEmployee?.id}}" readonly>
+            <input class="form-control" type="text" formControlName="eid" readonly>
         </div>
     </div>
     <div class="row mt-4">

@@ -12,12 +12,28 @@
   cursor: pointer;
   
 }
+.navbar-back{
+  font-size: 19px;
+  text-decoration: none;
+  color: silver;
+}
+nav{
+  background-color: #0f172a;
+  margin-bottom: 50px;
+}
 
 .approve-leave{
     border: none;
     background-color: green;
     color: white;
 
+}
+table{
+  margin: auto;
+  width: 80%;
+}
+th{
+  background-color: rgb(199, 218, 199);
 }
 .reject-leave{
     border: none;
@@ -31,6 +47,17 @@ table th, .table td {
   }
   .table tbody tr:hover {
     background-color: #f5f5f5;
+  }
+
+  p{
+    font-weight: bold;
+  }
+  .btn-group{
+    button{
+      width: 70px;
+      padding: 3px;
+      font-size: 14px;
+    }
   }
 
   /* Mobile view media query */

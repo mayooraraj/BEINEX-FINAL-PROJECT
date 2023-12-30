@@ -104,6 +104,36 @@
       "password": "1234",
       "profile": "profile2.jpg",
       "id": 16
+    },
+    {
+      "firstname": "jithin",
+      "lastname": "vinod",
+      "birthday": "1995-09-29",
+      "age": 28,
+      "gender": "m",
+      "status": "Active",
+      "role": "web designer",
+      "phno": "8086550102",
+      "bloodgroup": "O+",
+      "email": "jithin@gmail.com",
+      "password": "12345",
+      "profile": "profile3.jpg",
+      "id": 17
+    },
+    {
+      "firstname": "haina",
+      "lastname": "athul",
+      "birthday": "1999-05-23",
+      "age": 23,
+      "gender": "f",
+      "status": "Active",
+      "role": "System analyst",
+      "phno": "9946782303",
+      "bloodgroup": "O+",
+      "email": "haina@gmail.com",
+      "password": "1234",
+      "profile": "profile2.jpg",
+      "id": 18
     }
   ],
   "comments": [
@@ -113,7 +143,7 @@
       "startdate": "2023-12-01",
       "enddate": "2023-12-02",
       "reason": "sick leave",
-      "status": "pending",
+      "status": "approved",
       "id": 19
     },
     {
@@ -122,7 +152,7 @@
       "startdate": "2023-12-02",
       "enddate": "2023-12-03",
       "reason": "out of station",
-      "status": "Rejected",
+      "status": "approved",
       "id": 20
     },
     {
@@ -133,6 +163,34 @@
       "reason": "out of station",
       "status": "approved",
       "id": 21
+    },
+    {
+      "name": "nayanapavithran",
+      "eid": 12,
+      "startdate": "2023-12-27",
+      "enddate": "2023-12-28",
+      "reason": "sick leave",
+      "status": "Rejected",
+      "id": 22
+    },
+    {
+      "name": "nayanapavithran",
+      "eid": 12,
+      "startdate": "2023-12-28",
+      "enddate": "2023-12-27",
+      "reason": "out of station",
+      "status": "approved",
+      "id": 23
+    },
+    
+    {
+      "name": "jithinvinod",
+      "eid": 17,
+      "startdate": "2023-12-29",
+      "enddate": "2023-12-30",
+      "reason": "out of station",
+      "status": "approved",
+      "id": 26
     }
   ],
   "profile": {

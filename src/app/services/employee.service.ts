@@ -7,7 +7,6 @@ import { Employee } from '../models/employee.model';
 })
 export class EmployeeService {
   baseUrl = ' http://localhost:3000/posts';
-  xy=6;
 
   constructor(private http:HttpClient) { }
 

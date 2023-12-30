@@ -3,6 +3,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Employee } from '../../models/employee.model';
 import { EmployeeService } from '../../services/employee.service';
 import { Router } from '@angular/router';
+import { LeaveService } from 'src/app/services/leave.service';
+import { leavemodel } from 'src/app/models/leave';
+import { CardViewleaveComponent } from '../card-viewleave/card-viewleave.component';
+import { CardViewleaveService } from 'src/app/services/card-viewleave.service';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -17,7 +21,11 @@ export class DashboardPageComponent implements OnInit{
   employees:Employee[];
   employeesToDisplay : Employee[];
 
-  constructor(private fb:FormBuilder, private employeeService:EmployeeService,){
+  //to store leave data
+  leaveData:leavemodel[]=[];
+ 
+
+  constructor(private fb:FormBuilder, private employeeService:EmployeeService,private router:Router,private leaveService:LeaveService, private ViewleaveService:CardViewleaveService){
     this.employeeForm = fb.group({});
     this.employees =[]; //initialise employees as empty array
     this.employeesToDisplay = this.employees;
@@ -112,10 +120,10 @@ export class DashboardPageComponent implements OnInit{
   editEmployee(event:any){
     this.employees.forEach((val,ind) => {
       if(val.id === event){
-        this.setForm(val);
+        this.setForm(val); //employee data set to the form
       }
     })
-    this.removeEmployee(event);
+    this.removeEmployee(event); //delete existing employee data 
     this.addEmployeeButton.nativeElement.click(); //to trigger modal form
   }  
 
@@ -126,7 +134,6 @@ export class DashboardPageComponent implements OnInit{
     this.Age.setValue(emp.age);
     this.Gender.setValue(emp.gender);
     this.Status.setValue(emp.status);
-
     let roleIndex = 0;
     this.roleOptions.forEach((val,index) => {
       if(val === emp.role)roleIndex = index
@@ -139,6 +146,20 @@ export class DashboardPageComponent implements OnInit{
     this.fileInput.nativeElement.value='';
     
     }
+
+     //to view employee leave
+  viewLeave(event:any){
+    this.router.navigate(['card-leave']);
+     //to get all leave datas
+     this.leaveService.getleave().subscribe(res => {
+      //filter the leave of the employee
+      this.leaveData = res.filter(e => String(e.eid) === String(event));
+      //to send leave details in service so that it can display in another component
+      this.ViewleaveService.showleave(this.leaveData);
+      }); 
+     
+
+  }
 
     searchEmployees(event:any){
       let filteredEmployees : Employee[] =[];
