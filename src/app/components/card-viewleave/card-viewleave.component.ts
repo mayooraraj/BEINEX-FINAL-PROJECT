@@ -13,7 +13,6 @@ export class CardViewleaveComponent implements OnInit {
 
   ngOnInit(): void {
     this.empLeaveService.personalleavedata.subscribe((data) =>{
-      console.log('uff',data);
       this.leavedata = data;  
     })
   }

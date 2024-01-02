@@ -4,14 +4,14 @@
       "firstname": "ullas",
       "lastname": "raj",
       "birthday": "1999-05-12",
-      "age": "24",
+      "age": "28",
       "gender": "f",
       "status": "Active",
       "role": "web developer",
       "phno": "8086550102",
-      "bloodgroup": "o-",
+      "bloodgroup": "B-",
       "email": "ullas@gmail.com",
-      "password": "12345",
+      "password": "1234",
       "profile": "profile1.jpg",
       "id": 9
     },
@@ -124,16 +124,46 @@
       "firstname": "haina",
       "lastname": "athul",
       "birthday": "1999-05-23",
-      "age": 23,
+      "age": 24,
       "gender": "f",
       "status": "Active",
-      "role": "System analyst",
+      "role": "web developer",
       "phno": "9946782303",
       "bloodgroup": "O+",
       "email": "haina@gmail.com",
       "password": "1234",
       "profile": "profile2.jpg",
       "id": 18
+    },
+    {
+      "firstname": "vishnu",
+      "lastname": "c",
+      "birthday": "1999-12-11",
+      "age": 25,
+      "gender": "m",
+      "status": "Active",
+      "role": "java developer",
+      "phno": "9945786230",
+      "bloodgroup": "B-",
+      "email": "vishnu@gmail.com",
+      "password": "1234",
+      "profile": "profile3.jpg",
+      "id": 19
+    },
+    {
+      "firstname": "kavya",
+      "lastname": "nair",
+      "birthday": "1999-05-23",
+      "age": 25,
+      "gender": "f",
+      "status": "Active",
+      "role": "web developer",
+      "phno": "9747807583",
+      "bloodgroup": "AB+",
+      "email": "kavya@gmail.com",
+      "password": "12345",
+      "profile": "profile2.jpg",
+      "id": 20
     }
   ],
   "comments": [
@@ -182,7 +212,6 @@
       "status": "approved",
       "id": 23
     },
-    
     {
       "name": "jithinvinod",
       "eid": 17,
@@ -191,6 +220,42 @@
       "reason": "out of station",
       "status": "approved",
       "id": 26
+    },
+    {
+      "name": "ullas raj",
+      "eid": 9,
+      "startdate": "2024-01-01",
+      "enddate": "2024-01-02",
+      "reason": "sick leave",
+      "status": "pending",
+      "id": 27
+    },
+    {
+      "name": "vishnu c",
+      "eid": 19,
+      "startdate": "2024-01-02",
+      "enddate": "2024-01-03",
+      "reason": "sick leave",
+      "status": "approved",
+      "id": 28
+    },
+    {
+      "name": "arjun krishna",
+      "eid": 20,
+      "startdate": "2024-01-03",
+      "enddate": "2024-01-04",
+      "reason": "family event",
+      "status": "approved",
+      "id": 29
+    },
+    {
+      "name": "ullas raj",
+      "eid": 9,
+      "startdate": "2024-01-03",
+      "enddate": "2024-01-04",
+      "reason": "out of station",
+      "status": "pending",
+      "id": 30
     }
   ],
   "profile": {

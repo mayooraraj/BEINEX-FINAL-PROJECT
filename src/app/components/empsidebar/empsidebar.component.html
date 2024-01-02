@@ -12,9 +12,15 @@
             <span>Dashboard</span>
         </div>
         <div class="menu-item">
+           
+            <button mat-button  class="menu-button" [routerLink]="'profile-display'">
+                <mat-icon>dashboard</mat-icon>
+                <span>View Profile</span>
+            </button>
+
             <button mat-button  class="menu-button" [routerLink]="'profile'">
                 <mat-icon>dashboard</mat-icon>
-                <span>Profile</span>
+                <span>Edit Profile</span>
             </button>
 
             <button mat-button  class="menu-button" [routerLink]="'leave-form'">
@@ -27,10 +33,7 @@
                 <span>Leave details</span>
             </button>
            
-            <button mat-button  class="menu-button">
-                <mat-icon>settings</mat-icon>
-                <span>settings</span>
-            </button>
+            
         </div>
     </div>
 </div>

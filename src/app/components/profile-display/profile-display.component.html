@@ -1,0 +1,40 @@
+
+<div class="card" style="width: 32rem;">
+    <img src="../../../assets/images/{{loggedInEmployee?.profile}}" alt="" class="image">
+    <h3>Employee ID :<span>{{loggedInEmployee?.id}}</span></h3>
+    <div class="card__body">
+        <div class="row">
+            <div class="col">
+                <h2 class="card__text">First Name :<span> {{loggedInEmployee?.firstname | titlecase}}</span> </h2>
+            </div>
+            <div class="col">
+                <h2 class="card__text">Last Name : <span> {{loggedInEmployee?.lastname | titlecase}}</span></h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <h2>BirthDate :<span>{{loggedInEmployee?.birthday}}</span></h2>
+            </div>
+            <div class="col">
+                <h2>Age : <span>{{loggedInEmployee?.age}}</span></h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <h2>Email ID : <span> {{loggedInEmployee?.email}}</span></h2>
+            </div>
+            <div class="col">
+                <h2>BloodGroup :  <span>{{loggedInEmployee?.bloodgroup | uppercase}}</span></h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <h2>Ph No: <span> {{loggedInEmployee?.phno}}</span></h2>
+            </div>
+            <div class="col">
+                <h2>Role : <span> {{loggedInEmployee?.role | titlecase}}</span></h2>
+            </div>
+        </div>
+      <button class="btn btn-primary mt-2" (click)="editnavigation()">EDIT</button>
+    </div>
+  </div>

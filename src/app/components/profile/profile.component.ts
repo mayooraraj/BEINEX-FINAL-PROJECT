@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit{
   constructor(private empSharedData:ShareempdataService,private employeeservice:EmployeeService){}
  
   ngOnInit(): void {
-    this.empSharedData.employeeData$.subscribe((data) => { //new
+    this.empSharedData.employeeData$.subscribe((data) => { //to get logged in user data
       this.loggedInEmployee = data;
     });
   } 

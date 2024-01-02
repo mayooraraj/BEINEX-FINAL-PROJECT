@@ -12,6 +12,7 @@ import { EmpDashViewLeaveComponent } from './components/emp-dash-view-leave/emp-
 import { BarchartComponent } from './components/barchart/barchart.component';
 import { authGuard } from './guards/auth.guard';
 import { CardViewleaveComponent } from './components/card-viewleave/card-viewleave.component';
+import { ProfileDisplayComponent } from './components/profile-display/profile-display.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'bar-chart',component:BarchartComponent,canActivate:[authGuard]},
   {path:'view-leave',component:ViewleaveComponent,canActivate:[authGuard]},
   {path:'card-leave',component:CardViewleaveComponent,canActivate:[authGuard]},
+
   
   {
     path:'employee-dashboard',component:EmployeeDashboardComponent,
@@ -29,6 +31,7 @@ const routes: Routes = [
       {path:'leave-form',component:LeaveapplicaionComponent},
       {path:'dashboard',component:DashboardPageComponent},
       {path:'profile',component:ProfileComponent},
+      {path:'profile-display',component:ProfileDisplayComponent},
       {path:'emp-dash-viewleave',component:EmpDashViewLeaveComponent},
      
     ]

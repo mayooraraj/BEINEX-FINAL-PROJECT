@@ -34,9 +34,7 @@ export class LeaveapplicaionComponent {
     })
 
     //to get leave datas from back end
-    this.leaveService.getleave().subscribe(res => {
-      // console.log(res);
-      
+    this.leaveService.getleave().subscribe(res => {  
     })
 
     //to get logined employee data

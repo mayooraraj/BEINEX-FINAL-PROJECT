@@ -1,13 +1,11 @@
-<!-- <h1>{{loggedInEmployee?.firstname}}</h1> -->
+<!--To Edit Profile-->
 
 <form  class="form" >
     <div class="d-flex" style="justify-content: space-between;">
         <img src="../../../assets/images/{{loggedInEmployee?.profile}}" alt="" class="image">
-        <div>
-            <button class="edit-button" (click)="editEmpProfile()" >Edit</button>
-         </div>
+        
     </div>
-    <div class="first-row">
+    <!-- <div class="first-row">
         <div>
             <label for="name">Employee ID</label><br>
             <input type="text" class="form-control"  placeholder="{{loggedInEmployee?.id}}"  readonly>
@@ -16,7 +14,7 @@
             <label for="email">Email ID</label><br>
             <input type="email" class="form-control" name="email" readonly placeholder="{{loggedInEmployee?.email}}" (input)="onempDataChanged($event)">
         </div>
-    </div>
+    </div> -->
     <div class="first-row">
         <div class="div">
             <label for="name">First Name</label><br>
@@ -30,7 +28,7 @@
     <div class="first-row">
         <div>
             <label for="birthday">BirthDate</label><br>
-            <input type="text" class="form-control" name="birthday"  placeholder="{{loggedInEmployee?.birthday}}" (input)="onempDataChanged($event)" >
+            <input type="date" class="form-control" name="birthday"  placeholder="{{loggedInEmployee?.birthday}}" (input)="onempDataChanged($event)" >
         </div>
         <div class="div">
             <label for="age">Age</label><br>
@@ -45,7 +43,18 @@
         </div>
         <div>
             <label for="bloodgroup">Blood Group</label>
-            <input type="text" class="form-control" name="bloodgroup" placeholder="{{loggedInEmployee?.bloodgroup | uppercase}}"(input)="onempDataChanged($event)" >
+            <!-- <input type="text" class="form-control" name="bloodgroup" placeholder="{{loggedInEmployee?.bloodgroup | uppercase}}"(input)="onempDataChanged($event)" > -->
+            <select class="form-select" name="bloodgroup" class="form-control" (input)="onempDataChanged($event)">
+                <option value="default" selected>{{loggedInEmployee?.bloodgroup | uppercase}}</option>
+                 <option value="A+">A+</option>
+                 <option value="A-">A-</option>
+                 <option value="B+">B+</option>
+                 <option value="B-">B-</option>
+                 <option value="AB+">AB+</option>
+                 <option value="AB-">AB-</option>
+                 <option value="O+">O+</option>
+                 <option value="O-">O-</option>
+         </select>
         </div>
         
     </div>
@@ -54,6 +63,9 @@
             <label for="password">Change Password</label><br>
             <input type="text" class="form-control" name="password" placeholder="{{loggedInEmployee?.password}}"(input)="onempDataChanged($event)"  >
         </div>
+        <div>
+            <button class="edit-button" (click)="editEmpProfile()" >Save</button>
+         </div>
     </div>
 </form> 
 

@@ -23,7 +23,6 @@ export class DashboardPageComponent implements OnInit{
 
   //to store leave data
   leaveData:leavemodel[]=[];
- 
 
   constructor(private fb:FormBuilder, private employeeService:EmployeeService,private router:Router,private leaveService:LeaveService, private ViewleaveService:CardViewleaveService){
     this.employeeForm = fb.group({});
@@ -48,7 +47,7 @@ export class DashboardPageComponent implements OnInit{
       gender:this.fb.control('',Validators.required),
       status:this.fb.control('default',Validators.required),
       role:this.fb.control('default',Validators.required),
-      phno:this.fb.control('',Validators.required),
+      phno:this.fb.control('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
       bloodgroup:this.fb.control('default',Validators.required),
       email:this.fb.control('',[Validators.required, Validators.email]),
       password:this.fb.control('',Validators.required),
@@ -61,6 +60,7 @@ export class DashboardPageComponent implements OnInit{
     })
   }
 
+  //function for insert button
   addEmployee(){
     if (
       !this.FirstName.value ||
@@ -101,6 +101,23 @@ export class DashboardPageComponent implements OnInit{
     this.clearForm();
     })
   }
+
+   //add default value to all. clear the datas entered
+  clearForm(){
+    this.FirstName.setValue('');
+    this.LastName.setValue('');
+    this.BirthDay.setValue('');
+    this.Age.setValue('');
+    this.Gender.setValue('');
+    this.Status.setValue('');
+    this.Role.setValue('');
+    this.PhoneNumber.setValue('');
+    this.BloodGroup.setValue('');
+    this.Email.setValue('');
+    this.Password.setValue('');
+    this.fileInput.nativeElement.value='';
+}
+
 
   removeEmployee(event:any){
     const confirmation = confirm('Are you sure?');
@@ -176,22 +193,7 @@ export class DashboardPageComponent implements OnInit{
       }
     }
 
-  //add default value to all. clear the datas entered
-  clearForm(){
-    this.FirstName.setValue('');
-    this.LastName.setValue('');
-    this.BirthDay.setValue('');
-    this.Age.setValue('');
-    this.Gender.setValue('');
-    this.Status.setValue('');
-    this.Role.setValue('');
-    this.PhoneNumber.setValue('');
-    this.BloodGroup.setValue('');
-    this.Email.setValue('');
-    this.Password.setValue('');
-    this.fileInput.nativeElement.value='';
-}
-
+ 
   //to access controls
   public get FirstName():FormControl {
     return this.employeeForm.get('firstname') as FormControl;

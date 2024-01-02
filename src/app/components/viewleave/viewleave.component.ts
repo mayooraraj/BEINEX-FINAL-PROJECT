@@ -45,13 +45,6 @@ export class ViewleaveComponent implements OnInit {
      //req to server to update the status
      this.leaveService.approveLeave(leaveId,approvedData).subscribe((res) => {
       console.log('leave approved',res);})
-  
-      //to remove from leave list when button clicked
-      // const approvedDataIndex = this.employeeleaveDisplay.findIndex(e => e.id === leaveId);
-      //   if (approvedDataIndex !== -1) {
-      //       this.employeeleaveDisplay.splice(approvedDataIndex, 1);
-        
-      //   }
   }
 }
 
@@ -65,12 +58,6 @@ export class ViewleaveComponent implements OnInit {
         this.leaveService.rejectleave(leaveId,rejectedData).subscribe((res) => {
         console.log('leave rejected',res);})
 
-        //to remove from leave list when button clicked
-        const approvedDataIndex = this.employeeleaveDisplay.findIndex(e => e.id === leaveId);
-         if (approvedDataIndex !== -1)
-      {
-         this.employeeleaveDisplay.splice(approvedDataIndex, 1);
-      }
      }
   }
   

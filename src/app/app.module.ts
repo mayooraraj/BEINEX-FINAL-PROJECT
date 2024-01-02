@@ -27,6 +27,7 @@ import { BarchartComponent } from './components/barchart/barchart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { DoughnutComponent } from './components/doughnut/doughnut.component';
 import { CardViewleaveComponent } from './components/card-viewleave/card-viewleave.component';
+import { ProfileDisplayComponent } from './components/profile-display/profile-display.component';
 
 
 
@@ -46,6 +47,7 @@ import { CardViewleaveComponent } from './components/card-viewleave/card-viewlea
     BarchartComponent,
     DoughnutComponent,
     CardViewleaveComponent,
+    ProfileDisplayComponent,
    
    
    

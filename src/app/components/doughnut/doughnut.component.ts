@@ -19,8 +19,7 @@ export class DoughnutComponent implements OnInit {
   constructor(private service:EmployeeService){
     this.employees =[];
   }
-
-
+  
   chartdata:any;
 
   activedata:any[]=[];

@@ -1,0 +1,32 @@
+.card{
+    z-index: 1;
+    margin: auto;
+   // border: 2px solid rgb(12, 12, 70);
+    
+    h2{
+    font-size: 16px;
+    font-weight: bold;
+    }
+    h3{
+        margin-left: 20px;
+        font-weight: bold;
+    }
+    img{
+        width: 140px;
+        height: 150px;
+        margin-left: 20px;
+        margin-top: 20px;
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    span{
+        color:rgb(40, 40, 119);
+        font-weight: lighter;
+        margin-left: 5px;
+    }
+    &__body{
+       background-color: whitesmoke;
+        padding: 20px;
+    }
+}
